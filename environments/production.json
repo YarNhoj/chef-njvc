@@ -1,0 +1,8 @@
+{
+  "name": "production",
+  "override_attributes": {
+    "pci": {
+      "in_scope": true
+    }
+  }
+}

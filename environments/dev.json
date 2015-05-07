@@ -1,0 +1,6 @@
+{
+  "name": "dev",
+  "cookbook_versions": {
+    "apache": "= 0.2.2"
+  }
+}

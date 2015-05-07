@@ -1,0 +1,17 @@
+---
+driver:
+  name: docker
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: rhel-6.6
+    driver_config:
+      image: yarnhoj/rhel-chef
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apache::default]
+    attributes:

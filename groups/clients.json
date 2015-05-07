@@ -1,0 +1,7 @@
+{
+  "name": "clients",
+  "clients": [
+    "node1.johnray.io",
+    "cs-johnray-validator"
+  ]
+}

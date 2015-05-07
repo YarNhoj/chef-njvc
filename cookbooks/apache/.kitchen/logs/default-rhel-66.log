@@ -1,0 +1,965 @@
+I, [2015-05-05T14:43:42.712882 #26116]  INFO -- default-rhel-66: -----> Creating <default-rhel-66>...
+I, [2015-05-05T14:43:42.732137 #26116]  INFO -- default-rhel-66: Sending build context to Docker daemon  2.56 kB
+I, [2015-05-05T14:43:42.732241 #26116]  INFO -- default-rhel-66: Sending build context to Docker daemon 
+I, [2015-05-05T14:43:42.747112 #26116]  INFO -- default-rhel-66: Step 0 : FROM yarnhoj/rhel-chef
+I, [2015-05-05T14:43:42.747340 #26116]  INFO -- default-rhel-66:  ---> f38571d0f30b
+I, [2015-05-05T14:43:42.747393 #26116]  INFO -- default-rhel-66: Step 1 : RUN yum clean all
+I, [2015-05-05T14:43:42.961183 #26116]  INFO -- default-rhel-66:  ---> Running in 13fce2b4b43c
+I, [2015-05-05T14:43:43.252472 #26116]  INFO -- default-rhel-66: Loaded plugins: product-id, subscription-manager
+I, [2015-05-05T14:43:45.366419 #26116]  INFO -- default-rhel-66: Cleaning repos: rhel-6-server-eus-rpms rhel-6-server-rpms
+I, [2015-05-05T14:43:45.366548 #26116]  INFO -- default-rhel-66:        : rhel-ha-for-rhel-6-server-eus-rpms
+I, [2015-05-05T14:43:45.366699 #26116]  INFO -- default-rhel-66:        : rhel-ha-for-rhel-6-server-rpms rhel-hpn-for-rhel-6-server-rpms
+I, [2015-05-05T14:43:45.366748 #26116]  INFO -- default-rhel-66:        : rhel-lb-for-rhel-6-server-eus-rpms
+I, [2015-05-05T14:43:45.366795 #26116]  INFO -- default-rhel-66:        : rhel-lb-for-rhel-6-server-rpms
+I, [2015-05-05T14:43:45.366826 #26116]  INFO -- default-rhel-66:        : rhel-rs-for-rhel-6-server-eus-rpms
+I, [2015-05-05T14:43:45.366858 #26116]  INFO -- default-rhel-66:        : rhel-rs-for-rhel-6-server-rpms
+I, [2015-05-05T14:43:45.366912 #26116]  INFO -- default-rhel-66:        : rhel-scalefs-for-rhel-6-server-rpms rhel-server-dts-6-eus-rpms
+I, [2015-05-05T14:43:45.367108 #26116]  INFO -- default-rhel-66:        : rhel-server-dts-6-rpms rhel-server-dts2-6-eus-rpms
+I, [2015-05-05T14:43:45.367141 #26116]  INFO -- default-rhel-66:        : rhel-server-dts2-6-rpms rhel-sfs-for-rhel-6-server-eus-rpms
+I, [2015-05-05T14:43:45.367160 #26116]  INFO -- default-rhel-66: Cleaning up Everything
+I, [2015-05-05T14:43:46.341182 #26116]  INFO -- default-rhel-66:  ---> a86233c253a1
+I, [2015-05-05T14:43:47.390166 #26116]  INFO -- default-rhel-66: Removing intermediate container 13fce2b4b43c
+I, [2015-05-05T14:43:47.390245 #26116]  INFO -- default-rhel-66: Step 2 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2015-05-05T14:43:47.645274 #26116]  INFO -- default-rhel-66:  ---> Running in c2595cd6f3ce
+I, [2015-05-05T14:43:47.952476 #26116]  INFO -- default-rhel-66: Loaded plugins: product-id, subscription-manager
+I, [2015-05-05T14:43:50.059333 #26116]  INFO -- default-rhel-66: Setting up Install Process
+I, [2015-05-05T14:48:42.345890 #26116]  INFO -- default-rhel-66: Package curl-7.19.7-40.el6_6.4.x86_64 already installed and latest version
+I, [2015-05-05T14:48:42.346089 #26116]  INFO -- default-rhel-66: Resolving Dependencies
+I, [2015-05-05T14:48:42.346685 #26116]  INFO -- default-rhel-66: --> Running transaction check
+I, [2015-05-05T14:48:42.346860 #26116]  INFO -- default-rhel-66: ---> Package openssh-clients.x86_64 0:5.3p1-104.el6_6.1 will be installed
+I, [2015-05-05T14:48:42.461364 #26116]  INFO -- default-rhel-66: --> Processing Dependency: openssh = 5.3p1-104.el6_6.1 for package: openssh-clients-5.3p1-104.el6_6.1.x86_64
+I, [2015-05-05T14:48:42.469570 #26116]  INFO -- default-rhel-66: --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-5.3p1-104.el6_6.1.x86_64
+I, [2015-05-05T14:48:42.477490 #26116]  INFO -- default-rhel-66: --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-5.3p1-104.el6_6.1.x86_64
+I, [2015-05-05T14:48:42.480705 #26116]  INFO -- default-rhel-66: ---> Package openssh-server.x86_64 0:5.3p1-104.el6_6.1 will be installed
+I, [2015-05-05T14:48:42.527320 #26116]  INFO -- default-rhel-66: --> Processing Dependency: libwrap.so.0()(64bit) for package: openssh-server-5.3p1-104.el6_6.1.x86_64
+I, [2015-05-05T14:48:42.534269 #26116]  INFO -- default-rhel-66: ---> Package sudo.x86_64 0:1.8.6p3-15.el6 will be installed
+I, [2015-05-05T14:48:42.557055 #26116]  INFO -- default-rhel-66: ---> Package which.x86_64 0:2.19-6.el6 will be installed
+I, [2015-05-05T14:48:42.565362 #26116]  INFO -- default-rhel-66: --> Running transaction check
+I, [2015-05-05T14:48:42.565564 #26116]  INFO -- default-rhel-66: ---> Package fipscheck-lib.x86_64 0:1.2.0-7.el6 will be installed
+I, [2015-05-05T14:48:42.575852 #26116]  INFO -- default-rhel-66: --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.2.0-7.el6.x86_64
+I, [2015-05-05T14:48:42.581437 #26116]  INFO -- default-rhel-66: ---> Package libedit.x86_64 0:2.11-4.20080712cvs.1.el6 will be installed
+I, [2015-05-05T14:48:42.588660 #26116]  INFO -- default-rhel-66: ---> Package openssh.x86_64 0:5.3p1-104.el6_6.1 will be installed
+I, [2015-05-05T14:48:42.617527 #26116]  INFO -- default-rhel-66: ---> Package tcp_wrappers-libs.x86_64 0:7.6-57.el6 will be installed
+I, [2015-05-05T14:48:42.628557 #26116]  INFO -- default-rhel-66: --> Running transaction check
+I, [2015-05-05T14:48:42.628717 #26116]  INFO -- default-rhel-66: ---> Package fipscheck.x86_64 0:1.2.0-7.el6 will be installed
+I, [2015-05-05T14:48:42.836327 #26116]  INFO -- default-rhel-66: --> Finished Dependency Resolution
+I, [2015-05-05T14:48:42.873850 #26116]  INFO -- default-rhel-66: Dependencies Resolved
+I, [2015-05-05T14:48:42.876556 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:48:42.876650 #26116]  INFO -- default-rhel-66: ================================================================================
+I, [2015-05-05T14:48:42.877040 #26116]  INFO -- default-rhel-66:  Package           Arch   Version                  Repository              Size
+I, [2015-05-05T14:48:42.877161 #26116]  INFO -- default-rhel-66: ================================================================================
+I, [2015-05-05T14:48:42.877220 #26116]  INFO -- default-rhel-66: Installing:
+I, [2015-05-05T14:48:42.877299 #26116]  INFO -- default-rhel-66:  openssh-clients   x86_64 5.3p1-104.el6_6.1        rhel-6-server-eus-rpms 437 k
+I, [2015-05-05T14:48:42.877403 #26116]  INFO -- default-rhel-66:  openssh-server    x86_64 5.3p1-104.el6_6.1        rhel-6-server-eus-rpms 321 k
+I, [2015-05-05T14:48:42.877505 #26116]  INFO -- default-rhel-66:  sudo              x86_64 1.8.6p3-15.el6           rhel-6-server-eus-rpms 704 k
+I, [2015-05-05T14:48:42.877567 #26116]  INFO -- default-rhel-66:  which             x86_64 2.19-6.el6               rhel-6-server-eus-rpms  38 k
+I, [2015-05-05T14:48:42.877605 #26116]  INFO -- default-rhel-66: Installing for dependencies:
+I, [2015-05-05T14:48:42.877640 #26116]  INFO -- default-rhel-66:  fipscheck         x86_64 1.2.0-7.el6              rhel-6-server-eus-rpms  14 k
+I, [2015-05-05T14:48:42.878055 #26116]  INFO -- default-rhel-66:  fipscheck-lib     x86_64 1.2.0-7.el6              rhel-6-server-eus-rpms 8.4 k
+I, [2015-05-05T14:48:42.878092 #26116]  INFO -- default-rhel-66:  libedit           x86_64 2.11-4.20080712cvs.1.el6 rhel-6-server-eus-rpms  74 k
+I, [2015-05-05T14:48:42.878113 #26116]  INFO -- default-rhel-66:  openssh           x86_64 5.3p1-104.el6_6.1        rhel-6-server-eus-rpms 272 k
+I, [2015-05-05T14:48:42.878132 #26116]  INFO -- default-rhel-66:  tcp_wrappers-libs x86_64 7.6-57.el6               rhel-6-server-eus-rpms  62 k
+I, [2015-05-05T14:48:42.878149 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:48:42.878165 #26116]  INFO -- default-rhel-66: Transaction Summary
+I, [2015-05-05T14:48:42.878182 #26116]  INFO -- default-rhel-66: ================================================================================
+I, [2015-05-05T14:48:42.878198 #26116]  INFO -- default-rhel-66: Install       9 Package(s)
+I, [2015-05-05T14:48:42.878214 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:48:42.878230 #26116]  INFO -- default-rhel-66: Total download size: 1.9 M
+I, [2015-05-05T14:48:42.878246 #26116]  INFO -- default-rhel-66: Installed size: 5.5 M
+I, [2015-05-05T14:48:42.878310 #26116]  INFO -- default-rhel-66: Downloading Packages:
+I, [2015-05-05T14:48:52.854011 #26116]  INFO -- default-rhel-66: --------------------------------------------------------------------------------
+I, [2015-05-05T14:48:52.854251 #26116]  INFO -- default-rhel-66: Total                                           194 kB/s | 1.9 MB     00:09     
+I, [2015-05-05T14:48:52.855172 #26116]  INFO -- default-rhel-66: [91mwarning: rpmts_HdrFromFdno: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+I, [2015-05-05T14:48:52.855365 #26116]  INFO -- default-rhel-66: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+I, [2015-05-05T14:48:52.864005 #26116]  INFO -- default-rhel-66: [91mImporting GPG key 0xFD431D51:
+I, [2015-05-05T14:48:52.864072 #26116]  INFO -- default-rhel-66: [0m[91m Userid : Red Hat, Inc. (release key 2) <security@redhat.com>
+I, [2015-05-05T14:48:52.864221 #26116]  INFO -- default-rhel-66: [91m Package: redhat-release-server-6Server-6.6.0.2.el6.x86_64 (@koji-override-0/6.5)
+I, [2015-05-05T14:48:52.864271 #26116]  INFO -- default-rhel-66: [0m[91m From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+I, [2015-05-05T14:48:52.934266 #26116]  INFO -- default-rhel-66: [91mImporting GPG key 0x2FA658E0:
+I, [2015-05-05T14:48:52.934339 #26116]  INFO -- default-rhel-66: [0m[91m Userid : Red Hat, Inc. (auxiliary key) <security@redhat.com>
+I, [2015-05-05T14:48:52.934477 #26116]  INFO -- default-rhel-66: [91m Package: redhat-release-server-6Server-6.6.0.2.el6.x86_64 (@koji-override-0/6.5)
+I, [2015-05-05T14:48:52.934518 #26116]  INFO -- default-rhel-66: [0m[91m From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+I, [2015-05-05T14:48:52.978926 #26116]  INFO -- default-rhel-66: Running rpm_check_debug
+I, [2015-05-05T14:48:53.012670 #26116]  INFO -- default-rhel-66: Running Transaction Test
+I, [2015-05-05T14:48:53.035156 #26116]  INFO -- default-rhel-66: Transaction Test Succeeded
+I, [2015-05-05T14:48:53.069098 #26116]  INFO -- default-rhel-66: Running Transaction
+I, [2015-05-05T14:48:53.375764 #26116]  INFO -- default-rhel-66:   Installing : fipscheck-lib-1.2.0-7.el6.x86_64                             1/9 
+I, [2015-05-05T14:48:53.522268 #26116]  INFO -- default-rhel-66:   Installing : fipscheck-1.2.0-7.el6.x86_64                                 2/9 
+I, [2015-05-05T14:48:53.643316 #26116]  INFO -- default-rhel-66:   Installing : openssh-5.3p1-104.el6_6.1.x86_64                             3/9 
+I, [2015-05-05T14:48:53.806369 #26116]  INFO -- default-rhel-66:   Installing : libedit-2.11-4.20080712cvs.1.el6.x86_64                      4/9 
+I, [2015-05-05T14:48:54.142044 #26116]  INFO -- default-rhel-66:   Installing : tcp_wrappers-libs-7.6-57.el6.x86_64                          5/9 
+I, [2015-05-05T14:48:54.329740 #26116]  INFO -- default-rhel-66:   Installing : openssh-server-5.3p1-104.el6_6.1.x86_64                      6/9 
+I, [2015-05-05T14:48:54.541790 #26116]  INFO -- default-rhel-66:   Installing : openssh-clients-5.3p1-104.el6_6.1.x86_64                     7/9 
+I, [2015-05-05T14:48:54.698831 #26116]  INFO -- default-rhel-66:   Installing : sudo-1.8.6p3-15.el6.x86_64                                   8/9 
+I, [2015-05-05T14:48:54.774882 #26116]  INFO -- default-rhel-66:   Installing : which-2.19-6.el6.x86_64                                      9/9 
+I, [2015-05-05T14:48:54.775027 #26116]  INFO -- default-rhel-66: install-info: No such file or directory for /usr/share/info/which.info.gz
+I, [2015-05-05T14:49:04.387644 #26116]  INFO -- default-rhel-66:   Verifying  : tcp_wrappers-libs-7.6-57.el6.x86_64                          1/9 
+I, [2015-05-05T14:49:04.412144 #26116]  INFO -- default-rhel-66:   Verifying  : libedit-2.11-4.20080712cvs.1.el6.x86_64                      2/9 
+I, [2015-05-05T14:49:04.453127 #26116]  INFO -- default-rhel-66:   Verifying  : fipscheck-1.2.0-7.el6.x86_64                                 3/9 
+I, [2015-05-05T14:49:04.475822 #26116]  INFO -- default-rhel-66:   Verifying  : which-2.19-6.el6.x86_64                                      4/9 
+I, [2015-05-05T14:49:04.505730 #26116]  INFO -- default-rhel-66:   Verifying  : sudo-1.8.6p3-15.el6.x86_64                                   5/9 
+I, [2015-05-05T14:49:04.514074 #26116]  INFO -- default-rhel-66:   Verifying  : openssh-server-5.3p1-104.el6_6.1.x86_64                      6/9 
+I, [2015-05-05T14:49:04.528452 #26116]  INFO -- default-rhel-66:   Verifying  : openssh-5.3p1-104.el6_6.1.x86_64                             7/9 
+I, [2015-05-05T14:49:04.549203 #26116]  INFO -- default-rhel-66:   Verifying  : openssh-clients-5.3p1-104.el6_6.1.x86_64                     8/9 
+I, [2015-05-05T14:49:04.631453 #26116]  INFO -- default-rhel-66:   Verifying  : fipscheck-lib-1.2.0-7.el6.x86_64                             9/9 
+I, [2015-05-05T14:49:04.631527 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:49:04.631560 #26116]  INFO -- default-rhel-66: Installed:
+I, [2015-05-05T14:49:04.631672 #26116]  INFO -- default-rhel-66:   openssh-clients.x86_64 0:5.3p1-104.el6_6.1                                    
+I, [2015-05-05T14:49:04.631886 #26116]  INFO -- default-rhel-66:   openssh-server.x86_64 0:5.3p1-104.el6_6.1                                     
+I, [2015-05-05T14:49:04.632004 #26116]  INFO -- default-rhel-66:   sudo.x86_64 0:1.8.6p3-15.el6                                                  
+I, [2015-05-05T14:49:04.632034 #26116]  INFO -- default-rhel-66:   which.x86_64 0:2.19-6.el6                                                     
+I, [2015-05-05T14:49:04.632053 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:49:04.632070 #26116]  INFO -- default-rhel-66: Dependency Installed:
+I, [2015-05-05T14:49:04.632089 #26116]  INFO -- default-rhel-66:   fipscheck.x86_64 0:1.2.0-7.el6             fipscheck-lib.x86_64 0:1.2.0-7.el6 
+I, [2015-05-05T14:49:04.632106 #26116]  INFO -- default-rhel-66:   libedit.x86_64 0:2.11-4.20080712cvs.1.el6  openssh.x86_64 0:5.3p1-104.el6_6.1 
+I, [2015-05-05T14:49:04.632123 #26116]  INFO -- default-rhel-66:   tcp_wrappers-libs.x86_64 0:7.6-57.el6     
+I, [2015-05-05T14:49:04.632372 #26116]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:49:04.632405 #26116]  INFO -- default-rhel-66: Complete!
+I, [2015-05-05T14:49:07.581188 #26116]  INFO -- default-rhel-66:  ---> 08655a096deb
+I, [2015-05-05T14:49:08.733062 #26116]  INFO -- default-rhel-66: Removing intermediate container c2595cd6f3ce
+I, [2015-05-05T14:49:08.733151 #26116]  INFO -- default-rhel-66: Step 3 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2015-05-05T14:49:08.965286 #26116]  INFO -- default-rhel-66:  ---> Running in ac9c1c10d67e
+I, [2015-05-05T14:49:09.283179 #26116]  INFO -- default-rhel-66: Generating public/private rsa key pair.
+I, [2015-05-05T14:49:09.283269 #26116]  INFO -- default-rhel-66: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+I, [2015-05-05T14:49:09.283301 #26116]  INFO -- default-rhel-66: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+I, [2015-05-05T14:49:09.283322 #26116]  INFO -- default-rhel-66: The key fingerprint is:
+I, [2015-05-05T14:49:09.283391 #26116]  INFO -- default-rhel-66: 8f:3e:09:25:0c:eb:fe:82:a9:ce:ec:70:d8:f7:97:9e root@ca8437e24a4b
+I, [2015-05-05T14:49:09.283410 #26116]  INFO -- default-rhel-66: The key's randomart image is:
+I, [2015-05-05T14:49:09.283427 #26116]  INFO -- default-rhel-66: +--[ RSA 2048]----+
+I, [2015-05-05T14:49:09.283444 #26116]  INFO -- default-rhel-66: |                 |
+I, [2015-05-05T14:49:09.283461 #26116]  INFO -- default-rhel-66: |    .            |
+I, [2015-05-05T14:49:09.283484 #26116]  INFO -- default-rhel-66: |     +           |
+I, [2015-05-05T14:49:09.283644 #26116]  INFO -- default-rhel-66: |    . o .        |
+I, [2015-05-05T14:49:09.283670 #26116]  INFO -- default-rhel-66: |   .   oS        |
+I, [2015-05-05T14:49:09.283741 #26116]  INFO -- default-rhel-66: | o  . .  o       |
+I, [2015-05-05T14:49:09.283760 #26116]  INFO -- default-rhel-66: |o o+.  ..o.      |
+I, [2015-05-05T14:49:09.283777 #26116]  INFO -- default-rhel-66: |+.o.o. .=.       |
+I, [2015-05-05T14:49:09.283794 #26116]  INFO -- default-rhel-66: |+*   oooE.       |
+I, [2015-05-05T14:49:09.284150 #26116]  INFO -- default-rhel-66: +-----------------+
+I, [2015-05-05T14:49:10.201217 #26116]  INFO -- default-rhel-66:  ---> 038af934bb5e
+I, [2015-05-05T14:49:11.369740 #26116]  INFO -- default-rhel-66: Removing intermediate container ac9c1c10d67e
+I, [2015-05-05T14:49:11.369809 #26116]  INFO -- default-rhel-66: Step 4 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2015-05-05T14:49:11.629187 #26116]  INFO -- default-rhel-66:  ---> Running in 30687bc7e5e9
+I, [2015-05-05T14:49:11.928161 #26116]  INFO -- default-rhel-66: Generating public/private dsa key pair.
+I, [2015-05-05T14:49:11.928231 #26116]  INFO -- default-rhel-66: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+I, [2015-05-05T14:49:11.928256 #26116]  INFO -- default-rhel-66: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+I, [2015-05-05T14:49:11.928276 #26116]  INFO -- default-rhel-66: The key fingerprint is:
+I, [2015-05-05T14:49:11.928423 #26116]  INFO -- default-rhel-66: f5:b6:97:c7:b7:0a:5f:52:b4:1a:a3:3a:b3:47:4c:8d root@ca8437e24a4b
+I, [2015-05-05T14:49:11.928449 #26116]  INFO -- default-rhel-66: The key's randomart image is:
+I, [2015-05-05T14:49:11.928468 #26116]  INFO -- default-rhel-66: +--[ DSA 1024]----+
+I, [2015-05-05T14:49:11.928485 #26116]  INFO -- default-rhel-66: |                 |
+I, [2015-05-05T14:49:11.928502 #26116]  INFO -- default-rhel-66: |                 |
+I, [2015-05-05T14:49:11.928519 #26116]  INFO -- default-rhel-66: |          . o  . |
+I, [2015-05-05T14:49:11.928535 #26116]  INFO -- default-rhel-66: |         . E .. .|
+I, [2015-05-05T14:49:11.928551 #26116]  INFO -- default-rhel-66: |        S o oo o |
+I, [2015-05-05T14:49:11.928687 #26116]  INFO -- default-rhel-66: |           +..=o |
+I, [2015-05-05T14:49:11.928736 #26116]  INFO -- default-rhel-66: |          .o.oo.+|
+I, [2015-05-05T14:49:11.928756 #26116]  INFO -- default-rhel-66: |         o..o.o.o|
+I, [2015-05-05T14:49:11.928779 #26116]  INFO -- default-rhel-66: |         o=  o.. |
+I, [2015-05-05T14:49:11.928914 #26116]  INFO -- default-rhel-66: +-----------------+
+I, [2015-05-05T14:49:12.809176 #26116]  INFO -- default-rhel-66:  ---> e71f8ac92ce6
+I, [2015-05-05T14:49:13.976220 #26116]  INFO -- default-rhel-66: Removing intermediate container 30687bc7e5e9
+I, [2015-05-05T14:49:13.976289 #26116]  INFO -- default-rhel-66: Step 5 : RUN useradd -d /home/kitchen -m -s /bin/bash kitchen
+I, [2015-05-05T14:49:14.197333 #26116]  INFO -- default-rhel-66:  ---> Running in 835bac3871e5
+I, [2015-05-05T14:49:15.325175 #26116]  INFO -- default-rhel-66:  ---> 5e220de219d4
+I, [2015-05-05T14:49:16.485837 #26116]  INFO -- default-rhel-66: Removing intermediate container 835bac3871e5
+I, [2015-05-05T14:49:16.485909 #26116]  INFO -- default-rhel-66: Step 6 : RUN echo kitchen:kitchen | chpasswd
+I, [2015-05-05T14:49:16.753237 #26116]  INFO -- default-rhel-66:  ---> Running in 6db1ff11504d
+I, [2015-05-05T14:49:17.781320 #26116]  INFO -- default-rhel-66:  ---> 5dc5f174b629
+I, [2015-05-05T14:49:18.965536 #26116]  INFO -- default-rhel-66: Removing intermediate container 6db1ff11504d
+I, [2015-05-05T14:49:18.965609 #26116]  INFO -- default-rhel-66: Step 7 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2015-05-05T14:49:19.217279 #26116]  INFO -- default-rhel-66:  ---> Running in 58d3d73bede9
+I, [2015-05-05T14:49:20.225257 #26116]  INFO -- default-rhel-66:  ---> e9413f267d64
+I, [2015-05-05T14:49:21.398181 #26116]  INFO -- default-rhel-66: Removing intermediate container 58d3d73bede9
+I, [2015-05-05T14:49:21.398268 #26116]  INFO -- default-rhel-66: Step 8 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/kitchen
+I, [2015-05-05T14:49:21.653172 #26116]  INFO -- default-rhel-66:  ---> Running in 3e5d5b045ae4
+I, [2015-05-05T14:49:22.637219 #26116]  INFO -- default-rhel-66:  ---> e387fba88f1c
+I, [2015-05-05T14:49:23.778402 #26116]  INFO -- default-rhel-66: Removing intermediate container 3e5d5b045ae4
+I, [2015-05-05T14:49:23.778494 #26116]  INFO -- default-rhel-66: Successfully built e387fba88f1c
+I, [2015-05-05T14:49:24.057504 #26116]  INFO -- default-rhel-66: 77f588f5ce74f7b01be25b12e60338810461e4803b1c96700779243ec68ba3bd
+I, [2015-05-05T14:49:24.206169 #26116]  INFO -- default-rhel-66: [{
+I, [2015-05-05T14:49:24.206262 #26116]  INFO -- default-rhel-66:     "AppArmorProfile": "",
+I, [2015-05-05T14:49:24.206288 #26116]  INFO -- default-rhel-66:     "Args": [
+I, [2015-05-05T14:49:24.206317 #26116]  INFO -- default-rhel-66:  "-D",
+I, [2015-05-05T14:49:24.206344 #26116]  INFO -- default-rhel-66:  "-o",
+I, [2015-05-05T14:49:24.206367 #26116]  INFO -- default-rhel-66:  "UseDNS=no",
+I, [2015-05-05T14:49:24.206387 #26116]  INFO -- default-rhel-66:  "-o",
+I, [2015-05-05T14:49:24.206407 #26116]  INFO -- default-rhel-66:  "UsePAM=no",
+I, [2015-05-05T14:49:24.206429 #26116]  INFO -- default-rhel-66:  "-o",
+I, [2015-05-05T14:49:24.206452 #26116]  INFO -- default-rhel-66:  "PasswordAuthentication=yes",
+I, [2015-05-05T14:49:24.206516 #26116]  INFO -- default-rhel-66:  "-o",
+I, [2015-05-05T14:49:24.206537 #26116]  INFO -- default-rhel-66:  "UsePrivilegeSeparation=no",
+I, [2015-05-05T14:49:24.206559 #26116]  INFO -- default-rhel-66:  "-o",
+I, [2015-05-05T14:49:24.206581 #26116]  INFO -- default-rhel-66:  "PidFile=/tmp/sshd.pid"
+I, [2015-05-05T14:49:24.206597 #26116]  INFO -- default-rhel-66:     ],
+I, [2015-05-05T14:49:24.206613 #26116]  INFO -- default-rhel-66:     "Config": {
+I, [2015-05-05T14:49:24.206633 #26116]  INFO -- default-rhel-66:  "AttachStderr": false,
+I, [2015-05-05T14:49:24.206657 #26116]  INFO -- default-rhel-66:  "AttachStdin": false,
+I, [2015-05-05T14:49:24.206678 #26116]  INFO -- default-rhel-66:  "AttachStdout": false,
+I, [2015-05-05T14:49:24.206698 #26116]  INFO -- default-rhel-66:  "Cmd": [
+I, [2015-05-05T14:49:24.206718 #26116]  INFO -- default-rhel-66:      "/usr/sbin/sshd",
+I, [2015-05-05T14:49:24.206740 #26116]  INFO -- default-rhel-66:      "-D",
+I, [2015-05-05T14:49:24.206761 #26116]  INFO -- default-rhel-66:      "-o",
+I, [2015-05-05T14:49:24.206781 #26116]  INFO -- default-rhel-66:      "UseDNS=no",
+I, [2015-05-05T14:49:24.206800 #26116]  INFO -- default-rhel-66:      "-o",
+I, [2015-05-05T14:49:24.206852 #26116]  INFO -- default-rhel-66:      "UsePAM=no",
+I, [2015-05-05T14:49:24.206874 #26116]  INFO -- default-rhel-66:      "-o",
+I, [2015-05-05T14:49:24.206894 #26116]  INFO -- default-rhel-66:      "PasswordAuthentication=yes",
+I, [2015-05-05T14:49:24.206913 #26116]  INFO -- default-rhel-66:      "-o",
+I, [2015-05-05T14:49:24.206936 #26116]  INFO -- default-rhel-66:      "UsePrivilegeSeparation=no",
+I, [2015-05-05T14:49:24.206957 #26116]  INFO -- default-rhel-66:      "-o",
+I, [2015-05-05T14:49:24.206976 #26116]  INFO -- default-rhel-66:      "PidFile=/tmp/sshd.pid"
+I, [2015-05-05T14:49:24.206996 #26116]  INFO -- default-rhel-66:  ],
+I, [2015-05-05T14:49:24.207018 #26116]  INFO -- default-rhel-66:  "CpuShares": 0,
+I, [2015-05-05T14:49:24.207039 #26116]  INFO -- default-rhel-66:  "Cpuset": "",
+I, [2015-05-05T14:49:24.207059 #26116]  INFO -- default-rhel-66:  "Domainname": "",
+I, [2015-05-05T14:49:24.207079 #26116]  INFO -- default-rhel-66:  "Entrypoint": null,
+I, [2015-05-05T14:49:24.207117 #26116]  INFO -- default-rhel-66:  "Env": [
+I, [2015-05-05T14:49:24.207139 #26116]  INFO -- default-rhel-66:      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+I, [2015-05-05T14:49:24.207159 #26116]  INFO -- default-rhel-66:  ],
+I, [2015-05-05T14:49:24.207179 #26116]  INFO -- default-rhel-66:  "ExposedPorts": {
+I, [2015-05-05T14:49:24.207203 #26116]  INFO -- default-rhel-66:      "22/tcp": {}
+I, [2015-05-05T14:49:24.207246 #26116]  INFO -- default-rhel-66:  },
+I, [2015-05-05T14:49:24.207267 #26116]  INFO -- default-rhel-66:  "Hostname": "77f588f5ce74",
+I, [2015-05-05T14:49:24.207287 #26116]  INFO -- default-rhel-66:  "Image": "e387fba88f1c",
+I, [2015-05-05T14:49:24.207312 #26116]  INFO -- default-rhel-66:  "MacAddress": "",
+I, [2015-05-05T14:49:24.207333 #26116]  INFO -- default-rhel-66:  "Memory": 0,
+I, [2015-05-05T14:49:24.207352 #26116]  INFO -- default-rhel-66:  "MemorySwap": 0,
+I, [2015-05-05T14:49:24.207378 #26116]  INFO -- default-rhel-66:  "NetworkDisabled": false,
+I, [2015-05-05T14:49:24.207400 #26116]  INFO -- default-rhel-66:  "OnBuild": null,
+I, [2015-05-05T14:49:24.207426 #26116]  INFO -- default-rhel-66:  "OpenStdin": false,
+I, [2015-05-05T14:49:24.207447 #26116]  INFO -- default-rhel-66:  "PortSpecs": null,
+I, [2015-05-05T14:49:24.207471 #26116]  INFO -- default-rhel-66:  "StdinOnce": false,
+I, [2015-05-05T14:49:24.207492 #26116]  INFO -- default-rhel-66:  "Tty": false,
+I, [2015-05-05T14:49:24.207538 #26116]  INFO -- default-rhel-66:  "User": "",
+I, [2015-05-05T14:49:24.207559 #26116]  INFO -- default-rhel-66:  "Volumes": null,
+I, [2015-05-05T14:49:24.207583 #26116]  INFO -- default-rhel-66:  "WorkingDir": ""
+I, [2015-05-05T14:49:24.207600 #26116]  INFO -- default-rhel-66:     },
+I, [2015-05-05T14:49:24.207617 #26116]  INFO -- default-rhel-66:     "Created": "2015-05-05T18:49:23.829449605Z",
+I, [2015-05-05T14:49:24.207633 #26116]  INFO -- default-rhel-66:     "Driver": "devicemapper",
+I, [2015-05-05T14:49:24.207649 #26116]  INFO -- default-rhel-66:     "ExecDriver": "native-0.2",
+I, [2015-05-05T14:49:24.207664 #26116]  INFO -- default-rhel-66:     "ExecIDs": null,
+I, [2015-05-05T14:49:24.207680 #26116]  INFO -- default-rhel-66:     "HostConfig": {
+I, [2015-05-05T14:49:24.207699 #26116]  INFO -- default-rhel-66:  "Binds": null,
+I, [2015-05-05T14:49:24.207722 #26116]  INFO -- default-rhel-66:  "CapAdd": null,
+I, [2015-05-05T14:49:24.207743 #26116]  INFO -- default-rhel-66:  "CapDrop": null,
+I, [2015-05-05T14:49:24.207779 #26116]  INFO -- default-rhel-66:  "ContainerIDFile": "",
+I, [2015-05-05T14:49:24.207799 #26116]  INFO -- default-rhel-66:  "Devices": [],
+I, [2015-05-05T14:49:24.207823 #26116]  INFO -- default-rhel-66:  "Dns": null,
+I, [2015-05-05T14:49:24.207858 #26116]  INFO -- default-rhel-66:  "DnsSearch": null,
+I, [2015-05-05T14:49:24.207879 #26116]  INFO -- default-rhel-66:  "ExtraHosts": null,
+I, [2015-05-05T14:49:24.207899 #26116]  INFO -- default-rhel-66:  "IpcMode": "",
+I, [2015-05-05T14:49:24.207934 #26116]  INFO -- default-rhel-66:  "Links": null,
+I, [2015-05-05T14:49:24.207955 #26116]  INFO -- default-rhel-66:  "LxcConf": [],
+I, [2015-05-05T14:49:24.207990 #26116]  INFO -- default-rhel-66:  "NetworkMode": "bridge",
+I, [2015-05-05T14:49:24.208010 #26116]  INFO -- default-rhel-66:  "PidMode": "",
+I, [2015-05-05T14:49:24.208034 #26116]  INFO -- default-rhel-66:  "PortBindings": {
+I, [2015-05-05T14:49:24.208067 #26116]  INFO -- default-rhel-66:      "22/tcp": [
+I, [2015-05-05T14:49:24.208088 #26116]  INFO -- default-rhel-66:          {
+I, [2015-05-05T14:49:24.208121 #26116]  INFO -- default-rhel-66:              "HostIp": "",
+I, [2015-05-05T14:49:24.208155 #26116]  INFO -- default-rhel-66:              "HostPort": ""
+I, [2015-05-05T14:49:24.208175 #26116]  INFO -- default-rhel-66:          }
+I, [2015-05-05T14:49:24.208211 #26116]  INFO -- default-rhel-66:      ]
+I, [2015-05-05T14:49:24.208234 #26116]  INFO -- default-rhel-66:  },
+I, [2015-05-05T14:49:24.208255 #26116]  INFO -- default-rhel-66:  "Privileged": false,
+I, [2015-05-05T14:49:24.208275 #26116]  INFO -- default-rhel-66:  "PublishAllPorts": false,
+I, [2015-05-05T14:49:24.208321 #26116]  INFO -- default-rhel-66:  "ReadonlyRootfs": false,
+I, [2015-05-05T14:49:24.208345 #26116]  INFO -- default-rhel-66:  "RestartPolicy": {
+I, [2015-05-05T14:49:24.208366 #26116]  INFO -- default-rhel-66:      "MaximumRetryCount": 0,
+I, [2015-05-05T14:49:24.208386 #26116]  INFO -- default-rhel-66:      "Name": ""
+I, [2015-05-05T14:49:24.208406 #26116]  INFO -- default-rhel-66:  },
+I, [2015-05-05T14:49:24.208429 #26116]  INFO -- default-rhel-66:  "SecurityOpt": null,
+I, [2015-05-05T14:49:24.208449 #26116]  INFO -- default-rhel-66:  "VolumesFrom": null
+I, [2015-05-05T14:49:24.208466 #26116]  INFO -- default-rhel-66:     },
+I, [2015-05-05T14:49:24.208504 #26116]  INFO -- default-rhel-66:     "HostnamePath": "/var/lib/docker/containers/77f588f5ce74f7b01be25b12e60338810461e4803b1c96700779243ec68ba3bd/hostname",
+I, [2015-05-05T14:49:24.208522 #26116]  INFO -- default-rhel-66:     "HostsPath": "/var/lib/docker/containers/77f588f5ce74f7b01be25b12e60338810461e4803b1c96700779243ec68ba3bd/hosts",
+I, [2015-05-05T14:49:24.208543 #26116]  INFO -- default-rhel-66:     "Id": "77f588f5ce74f7b01be25b12e60338810461e4803b1c96700779243ec68ba3bd",
+I, [2015-05-05T14:49:24.208564 #26116]  INFO -- default-rhel-66:     "Image": "e387fba88f1cd51f44d232cbfa34bc463ec75a693ba1de34e8cb229d4ffc29cd",
+I, [2015-05-05T14:49:24.208582 #26116]  INFO -- default-rhel-66:     "MountLabel": "",
+I, [2015-05-05T14:49:24.208598 #26116]  INFO -- default-rhel-66:     "Name": "/elated_lovelace",
+I, [2015-05-05T14:49:24.208613 #26116]  INFO -- default-rhel-66:     "NetworkSettings": {
+I, [2015-05-05T14:49:24.208660 #26116]  INFO -- default-rhel-66:  "Bridge": "docker0",
+I, [2015-05-05T14:49:24.208681 #26116]  INFO -- default-rhel-66:  "Gateway": "172.17.42.1",
+I, [2015-05-05T14:49:24.208704 #26116]  INFO -- default-rhel-66:  "GlobalIPv6Address": "",
+I, [2015-05-05T14:49:24.208725 #26116]  INFO -- default-rhel-66:  "GlobalIPv6PrefixLen": 0,
+I, [2015-05-05T14:49:24.208745 #26116]  INFO -- default-rhel-66:  "IPAddress": "172.17.0.12",
+I, [2015-05-05T14:49:24.208765 #26116]  INFO -- default-rhel-66:  "IPPrefixLen": 16,
+I, [2015-05-05T14:49:24.208787 #26116]  INFO -- default-rhel-66:  "IPv6Gateway": "",
+I, [2015-05-05T14:49:24.208809 #26116]  INFO -- default-rhel-66:  "LinkLocalIPv6Address": "fe80::42:acff:fe11:c",
+I, [2015-05-05T14:49:24.208829 #26116]  INFO -- default-rhel-66:  "LinkLocalIPv6PrefixLen": 64,
+I, [2015-05-05T14:49:24.208881 #26116]  INFO -- default-rhel-66:  "MacAddress": "02:42:ac:11:00:0c",
+I, [2015-05-05T14:49:24.208946 #26116]  INFO -- default-rhel-66:  "PortMapping": null,
+I, [2015-05-05T14:49:24.208969 #26116]  INFO -- default-rhel-66:  "Ports": {
+I, [2015-05-05T14:49:24.208989 #26116]  INFO -- default-rhel-66:      "22/tcp": [
+I, [2015-05-05T14:49:24.209008 #26116]  INFO -- default-rhel-66:          {
+I, [2015-05-05T14:49:24.209033 #26116]  INFO -- default-rhel-66:              "HostIp": "0.0.0.0",
+I, [2015-05-05T14:49:24.209054 #26116]  INFO -- default-rhel-66:              "HostPort": "49153"
+I, [2015-05-05T14:49:24.209074 #26116]  INFO -- default-rhel-66:          }
+I, [2015-05-05T14:49:24.209096 #26116]  INFO -- default-rhel-66:      ]
+I, [2015-05-05T14:49:24.209121 #26116]  INFO -- default-rhel-66:  }
+I, [2015-05-05T14:49:24.209138 #26116]  INFO -- default-rhel-66:     },
+I, [2015-05-05T14:49:24.209154 #26116]  INFO -- default-rhel-66:     "Path": "/usr/sbin/sshd",
+I, [2015-05-05T14:49:24.209170 #26116]  INFO -- default-rhel-66:     "ProcessLabel": "",
+I, [2015-05-05T14:49:24.209187 #26116]  INFO -- default-rhel-66:     "ResolvConfPath": "/var/lib/docker/containers/77f588f5ce74f7b01be25b12e60338810461e4803b1c96700779243ec68ba3bd/resolv.conf",
+I, [2015-05-05T14:49:24.209203 #26116]  INFO -- default-rhel-66:     "RestartCount": 0,
+I, [2015-05-05T14:49:24.209218 #26116]  INFO -- default-rhel-66:     "State": {
+I, [2015-05-05T14:49:24.209283 #26116]  INFO -- default-rhel-66:  "Error": "",
+I, [2015-05-05T14:49:24.209323 #26116]  INFO -- default-rhel-66:  "ExitCode": 0,
+I, [2015-05-05T14:49:24.209362 #26116]  INFO -- default-rhel-66:  "FinishedAt": "0001-01-01T00:00:00Z",
+I, [2015-05-05T14:49:24.209401 #26116]  INFO -- default-rhel-66:  "OOMKilled": false,
+I, [2015-05-05T14:49:24.209442 #26116]  INFO -- default-rhel-66:  "Paused": false,
+I, [2015-05-05T14:49:24.209482 #26116]  INFO -- default-rhel-66:  "Pid": 27549,
+I, [2015-05-05T14:49:24.209520 #26116]  INFO -- default-rhel-66:  "Restarting": false,
+I, [2015-05-05T14:49:24.209556 #26116]  INFO -- default-rhel-66:  "Running": true,
+I, [2015-05-05T14:49:24.209600 #26116]  INFO -- default-rhel-66:  "StartedAt": "2015-05-05T18:49:24.174668361Z"
+I, [2015-05-05T14:49:24.209634 #26116]  INFO -- default-rhel-66:     },
+I, [2015-05-05T14:49:24.209664 #26116]  INFO -- default-rhel-66:     "Volumes": {},
+I, [2015-05-05T14:49:24.209693 #26116]  INFO -- default-rhel-66:     "VolumesRW": {}
+I, [2015-05-05T14:49:24.209722 #26116]  INFO -- default-rhel-66: }
+I, [2015-05-05T14:49:24.209750 #26116]  INFO -- default-rhel-66: ]
+I, [2015-05-05T14:49:24.219358 #26116]  INFO -- default-rhel-66: Finished creating <default-rhel-66> (5m41.50s).
+I, [2015-05-05T14:53:35.918352 #27650]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T14:53:35.918917 #27650]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T14:53:35.919003 #27650]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T14:53:35.919252 #27650]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T14:53:35.924053 #27650]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T14:53:35.925116 #27650]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T14:53:36.015528 #27650]  INFO -- default-rhel-66: -----> Installing Chef Omnibus (install only if missing)
+I, [2015-05-05T14:53:36.016040 #27650]  INFO -- default-rhel-66: downloading https://www.chef.io/chef/install.sh
+I, [2015-05-05T14:53:36.016343 #27650]  INFO -- default-rhel-66:   to file /tmp/install.sh
+I, [2015-05-05T14:53:36.016523 #27650]  INFO -- default-rhel-66: trying curl...
+I, [2015-05-05T14:53:36.354585 #27650]  INFO -- default-rhel-66:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+I, [2015-05-05T14:53:36.354950 #27650]  INFO -- default-rhel-66:            Dload  Upload   Total   Spent    Left  Speed
+I, [2015-05-05T14:53:36.465943 #27650]  INFO -- default-rhel-66:   0     0      0      0 --:--:-- --:--:-- --:--:--     0100 18990  100 18990    0     0  42716      0 --:--:-- --:--:-- --:--:--  167k
+I, [2015-05-05T14:53:36.485579 #27650]  INFO -- default-rhel-66: Downloading Chef  for el...
+I, [2015-05-05T14:53:36.485914 #27650]  INFO -- default-rhel-66: downloading https://www.getchef.com/chef/metadata?v=&prerelease=false&nightlies=false&p=el&pv=6&m=x86_64
+I, [2015-05-05T14:53:36.486182 #27650]  INFO -- default-rhel-66:   to file /tmp/install.sh.16/metadata.txt
+I, [2015-05-05T14:53:36.486394 #27650]  INFO -- default-rhel-66: trying curl...
+I, [2015-05-05T14:53:36.835787 #27650]  INFO -- default-rhel-66: url	https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-12.3.0-1.el6.x86_64.rpm
+I, [2015-05-05T14:53:36.835863 #27650]  INFO -- default-rhel-66: md5	c19fefcb3d033107e9fbdb3839312584
+I, [2015-05-05T14:53:36.835904 #27650]  INFO -- default-rhel-66: sha256	4b7c846a9ad93564cc203a5ac99890431f7d6ad159c424aa89827fd772c9881d
+I, [2015-05-05T14:53:36.838628 #27650]  INFO -- default-rhel-66: downloaded metadata file looks valid...
+I, [2015-05-05T14:53:36.848281 #27650]  INFO -- default-rhel-66: downloading https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-12.3.0-1.el6.x86_64.rpm
+I, [2015-05-05T14:53:36.848459 #27650]  INFO -- default-rhel-66:   to file /tmp/install.sh.16/chef-12.3.0-1.el6.x86_64.rpm
+I, [2015-05-05T14:53:36.848972 #27650]  INFO -- default-rhel-66: trying curl...
+I, [2015-05-05T14:56:40.837456 #27650]  INFO -- default-rhel-66: Comparing checksum with sha256sum...
+I, [2015-05-05T14:56:41.148231 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:56:41.148305 #27650]  INFO -- default-rhel-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2015-05-05T14:56:41.148332 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:56:41.148351 #27650]  INFO -- default-rhel-66: You are installing an omnibus package without a version pin.  If you are installing
+I, [2015-05-05T14:56:41.148380 #27650]  INFO -- default-rhel-66: on production servers via an automated process this is DANGEROUS and you will
+I, [2015-05-05T14:56:41.148410 #27650]  INFO -- default-rhel-66: be upgraded without warning on new releases, even to new major release.
+I, [2015-05-05T14:56:41.148455 #27650]  INFO -- default-rhel-66: Letting the version float is only appropriate in desktop, test, development or
+I, [2015-05-05T14:56:41.148472 #27650]  INFO -- default-rhel-66: CI/CD environments.
+I, [2015-05-05T14:56:41.148511 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:56:41.148533 #27650]  INFO -- default-rhel-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2015-05-05T14:56:41.148549 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T14:56:41.148586 #27650]  INFO -- default-rhel-66: Installing Chef 
+I, [2015-05-05T14:56:41.148612 #27650]  INFO -- default-rhel-66: installing with rpm...
+I, [2015-05-05T14:56:41.204601 #27650]  INFO -- default-rhel-66: warning: /tmp/install.sh.16/chef-12.3.0-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2015-05-05T14:56:41.318277 #27650]  INFO -- default-rhel-66: Preparing...                                                            (100%)#                                           (100%)##                                          (100%)###                                         (100%)####                                        (100%)#####                                       (100%)######                                      (100%)#######                                     (100%)########                                    (100%)#########                                   (100%)##########                                  (100%)###########                                 (100%)############                                (100%)#############                               (100%)##############                              (100%)###############                             (100%)################                            (100%)#################                           (100%)##################                          (100%)###################                         (100%)####################                        (100%)#####################                       (100%)######################                      (100%)#######################                     (100%)########################                    (100%)#########################                   (100%)##########################                  (100%)###########################                 (100%)############################                (100%)#############################               (100%)##############################              (100%)###############################             (100%)################################            (100%)#################################           (100%)##################################          (100%)###################################         (100%)####################################        (100%)#####################################       (100%)######################################      (100%)#######################################     (100%)########################################    (100%)#########################################   (100%)##########################################  (100%)########################################### (100%)########################################### [100%]
+I, [2015-05-05T14:56:43.693160 #27650]  INFO -- default-rhel-66:    1:chef                                                               (  1%)#                                           (  3%)##                                          (  6%)###                                         (  8%)####                                        ( 10%)#####                                       ( 13%)######                                      ( 15%)#######                                     ( 17%)########                                    ( 19%)#########                                   ( 22%)##########                                  ( 24%)###########                                 ( 26%)############                                ( 28%)#############                               ( 31%)##############                              ( 33%)###############                             ( 35%)################                            ( 38%)#################                           ( 40%)##################                          ( 42%)###################                         ( 44%)####################                        ( 47%)#####################                       ( 49%)######################                      ( 51%)#######################                     ( 53%)########################                    ( 56%)#########################                   ( 58%)##########################                  ( 60%)###########################                 ( 63%)############################                ( 65%)#############################               ( 67%)##############################              ( 69%)###############################             ( 72%)################################            ( 74%)#################################           ( 76%)##################################          ( 78%)###################################         ( 81%)####################################        ( 83%)#####################################       ( 85%)######################################      ( 88%)#######################################     ( 90%)########################################    ( 92%)#########################################   ( 94%)##########################################  ( 97%)########################################### ( 99%)########################################### [100%]
+I, [2015-05-05T14:56:44.327386 #27650]  INFO -- default-rhel-66: Thank you for installing Chef!
+I, [2015-05-05T14:56:44.361108 #27650]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T14:56:45.810504 #27650]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T14:56:46.639022 #27650]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T14:56:46.647347 #27650]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T14:56:46.647720 #27650]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:01:13.124616 #27650]  INFO -- default-rhel-66:   * yum_package[httpd] action install
+I, [2015-05-05T15:01:13.124898 #27650]  INFO -- default-rhel-66:     - install version 2.2.15-39.el6 of package httpd
+I, [2015-05-05T15:01:13.190171 #27650]  INFO -- default-rhel-66:   * service[httpd] action enable
+I, [2015-05-05T15:01:13.190433 #27650]  INFO -- default-rhel-66: - enable service service[httpd]
+I, [2015-05-05T15:01:13.287106 #27650]  INFO -- default-rhel-66:   * service[httpd] action start
+I, [2015-05-05T15:01:13.287680 #27650]  INFO -- default-rhel-66: - start service service[httpd]
+I, [2015-05-05T15:01:13.303133 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.303425 #27650]  INFO -- default-rhel-66: - execute mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled
+I, [2015-05-05T15:01:13.308515 #27650]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create
+I, [2015-05-05T15:01:13.309976 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.310187 #27650]  INFO -- default-rhel-66:     - update content in file /etc/httpd/conf.d/clowns.conf from none to 7ea1c5
+I, [2015-05-05T15:01:13.310415 #27650]  INFO -- default-rhel-66: --- /etc/httpd/conf.d/clowns.conf	2015-05-05 15:01:13.304614971 -0400
+I, [2015-05-05T15:01:13.310540 #27650]  INFO -- default-rhel-66: 2015-05-05 15:01:13.304614971 -0400
+I, [2015-05-05T15:01:13.310651 #27650]  INFO -- default-rhel-66: @@ -1 +1,17 @@
+I, [2015-05-05T15:01:13.310783 #27650]  INFO -- default-rhel-66: + 
+I, [2015-05-05T15:01:13.310942 #27650]  INFO -- default-rhel-66:     +<VirtualHost *:80>
+I, [2015-05-05T15:01:13.311073 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.311179 #27650]  INFO -- default-rhel-66: + 
+I, [2015-05-05T15:01:13.311362 #27650]  INFO -- default-rhel-66: +DocumentRoot /srv/apache/clowns
+I, [2015-05-05T15:01:13.311475 #27650]  INFO -- default-rhel-66: +<Directory />
+I, [2015-05-05T15:01:13.311959 #27650]  INFO -- default-rhel-66:     +Options FollowSymLinks
+I, [2015-05-05T15:01:13.312148 #27650]  INFO -- default-rhel-66: +AllowOverride None
+I, [2015-05-05T15:01:13.312359 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.312506 #27650]  INFO -- default-rhel-66: +<Directory /srv/apache/clowns>
+I, [2015-05-05T15:01:13.312680 #27650]  INFO -- default-rhel-66: +Options Indexes FollowSymLinks MultiViews
+I, [2015-05-05T15:01:13.312864 #27650]  INFO -- default-rhel-66:     +AllowOverride None
+I, [2015-05-05T15:01:13.312994 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.313126 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.313237 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.313339 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.325991 #27650]  INFO -- default-rhel-66: - change mode from '' to '0644'
+I, [2015-05-05T15:01:13.327316 #27650]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create
+I, [2015-05-05T15:01:13.328035 #27650]  INFO -- default-rhel-66:     - create new directory /srv/apache/clowns
+I, [2015-05-05T15:01:13.328302 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.330166 #27650]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create
+I, [2015-05-05T15:01:13.331091 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.331530 #27650]  INFO -- default-rhel-66: - update content in file /srv/apache/clowns/index.html from none to c2ed65
+I, [2015-05-05T15:01:13.331817 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.331874 #27650]  INFO -- default-rhel-66:     +++ /tmp/chef-rendered-template20150505-112-15bkgi1	2015-05-05 15:01:13.328614971 -0400
+I, [2015-05-05T15:01:13.332206 #27650]  INFO -- default-rhel-66: @@ -1 +1,8 @@
+I, [2015-05-05T15:01:13.332552 #27650]  INFO -- default-rhel-66:     +<html>
+I, [2015-05-05T15:01:13.332801 #27650]  INFO -- default-rhel-66: +<body>
+I, [2015-05-05T15:01:13.333133 #27650]  INFO -- default-rhel-66:     +  <h1>Welcome to Shadow-Soft</h1>
+I, [2015-05-05T15:01:13.333533 #27650]  INFO -- default-rhel-66:     +	<h2>We love clowns</h2>
+I, [2015-05-05T15:01:13.333920 #27650]  INFO -- default-rhel-66: +	<h2>My IP is 172.17.0.12:80</h2>
+I, [2015-05-05T15:01:13.334312 #27650]  INFO -- default-rhel-66: +</body>
+I, [2015-05-05T15:01:13.334656 #27650]  INFO -- default-rhel-66: +</html> 
+I, [2015-05-05T15:01:13.334981 #27650]  INFO -- default-rhel-66: - change mode from '' to '0644'
+I, [2015-05-05T15:01:13.335418 #27650]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create
+I, [2015-05-05T15:01:13.335846 #27650]  INFO -- default-rhel-66: - create new file /etc/httpd/conf.d/bears.conf
+I, [2015-05-05T15:01:13.336314 #27650]  INFO -- default-rhel-66: - update content in file /etc/httpd/conf.d/bears.conf from none to 07edbb
+I, [2015-05-05T15:01:13.336649 #27650]  INFO -- default-rhel-66: 2015-05-05 15:01:13.332614971 -0400
+I, [2015-05-05T15:01:13.337076 #27650]  INFO -- default-rhel-66:     +++ /tmp/chef-rendered-template20150505-112-dn57xn	2015-05-05 15:01:13.332614971 -0400
+I, [2015-05-05T15:01:13.337471 #27650]  INFO -- default-rhel-66: @@ -1 +1,18 @@
+I, [2015-05-05T15:01:13.337830 #27650]  INFO -- default-rhel-66:     +Listen 81
+I, [2015-05-05T15:01:13.337883 #27650]  INFO -- default-rhel-66:     + 
+I, [2015-05-05T15:01:13.338234 #27650]  INFO -- default-rhel-66: +<VirtualHost *:81>
+I, [2015-05-05T15:01:13.338531 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.338906 #27650]  INFO -- default-rhel-66:     + 
+I, [2015-05-05T15:01:13.339203 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.339661 #27650]  INFO -- default-rhel-66:     +<Directory />
+I, [2015-05-05T15:01:13.339890 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.340218 #27650]  INFO -- default-rhel-66:     +AllowOverride None
+I, [2015-05-05T15:01:13.340675 #27650]  INFO -- default-rhel-66:     +</Directory>
+I, [2015-05-05T15:01:13.341025 #27650]  INFO -- default-rhel-66: +<Directory /srv/apache/bears>
+I, [2015-05-05T15:01:13.341342 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.341397 #27650]  INFO -- default-rhel-66:     +AllowOverride None
+I, [2015-05-05T15:01:13.341636 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:13.341985 #27650]  INFO -- default-rhel-66: +allow from all
+I, [2015-05-05T15:01:13.342408 #27650]  INFO -- default-rhel-66: +</Directory>
+I, [2015-05-05T15:01:13.342815 #27650]  INFO -- default-rhel-66:     +</VirtualHost> 
+I, [2015-05-05T15:01:13.343200 #27650]  INFO -- default-rhel-66:     - change mode from '' to '0644'
+I, [2015-05-05T15:01:13.343648 #27650]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create
+I, [2015-05-05T15:01:13.344056 #27650]  INFO -- default-rhel-66:     - create new directory /srv/apache/bears
+I, [2015-05-05T15:01:13.344395 #27650]  INFO -- default-rhel-66: - change mode from '' to '0755'
+I, [2015-05-05T15:01:13.344818 #27650]  INFO -- default-rhel-66:   * template[/srv/apache/bears/index.html] action create
+I, [2015-05-05T15:01:13.345112 #27650]  INFO -- default-rhel-66: - create new file /srv/apache/bears/index.html
+I, [2015-05-05T15:01:13.345357 #27650]  INFO -- default-rhel-66: - update content in file /srv/apache/bears/index.html from none to f31ac6
+I, [2015-05-05T15:01:13.345686 #27650]  INFO -- default-rhel-66:     --- /srv/apache/bears/index.html	2015-05-05 15:01:13.336614971 -0400
+I, [2015-05-05T15:01:13.346657 #27650]  INFO -- default-rhel-66:     +++ /tmp/chef-rendered-template20150505-112-cijeno	2015-05-05 15:01:13.336614971 -0400
+I, [2015-05-05T15:01:13.347091 #27650]  INFO -- default-rhel-66:     @@ -1 +1,8 @@
+I, [2015-05-05T15:01:13.347316 #27650]  INFO -- default-rhel-66: +<html>
+I, [2015-05-05T15:01:13.347568 #27650]  INFO -- default-rhel-66:     +<body>
+I, [2015-05-05T15:01:13.347865 #27650]  INFO -- default-rhel-66: +  <h1>Welcome to Shadow-Soft</h1>
+I, [2015-05-05T15:01:13.348211 #27650]  INFO -- default-rhel-66: +	<h2>We love bears</h2>
+I, [2015-05-05T15:01:13.348471 #27650]  INFO -- default-rhel-66: +	<h2>My IP is 172.17.0.12:81</h2>
+I, [2015-05-05T15:01:13.348742 #27650]  INFO -- default-rhel-66: +</body>
+I, [2015-05-05T15:01:13.349021 #27650]  INFO -- default-rhel-66: +</html> 
+I, [2015-05-05T15:01:13.349294 #27650]  INFO -- default-rhel-66: - change mode from '' to '0644'
+I, [2015-05-05T15:01:14.582285 #27650]  INFO -- default-rhel-66:   * service[httpd] action restart
+I, [2015-05-05T15:01:14.582567 #27650]  INFO -- default-rhel-66: - restart service service[httpd]
+I, [2015-05-05T15:01:14.582704 #27650]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:01:14.582838 #27650]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:01:14.582953 #27650]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:01:14.583064 #27650]  INFO -- default-rhel-66: Chef Client finished, 11/11 resources updated in 268.831917108 seconds
+I, [2015-05-05T15:01:14.704480 #27650]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (7m38.78s).
+I, [2015-05-05T15:03:43.310549 #28178]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:03:43.312465 #28178]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m0.00s).
+I, [2015-05-05T15:03:43.312574 #28178]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:03:43.314320 #28178]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m0.00s).
+I, [2015-05-05T15:07:45.710423 #28336]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:07:45.712344 #28336]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m0.00s).
+I, [2015-05-05T15:09:53.505454 #28425]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:09:53.594696 #28425]  INFO -- default-rhel-66: sudo: /tmp/busser/bin/busser: command not found
+I, [2015-05-05T15:09:53.598310 #28425]  INFO -- default-rhel-66: sudo: /tmp/busser/bin/busser: command not found
+I, [2015-05-05T15:09:53.598823 #28425]  INFO -- default-rhel-66: Uploading /serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:09:53.602653 #28425]  INFO -- default-rhel-66: sudo: /tmp/busser/bin/busser: command not found
+I, [2015-05-05T15:09:53.606255 #28425]  INFO -- default-rhel-66: sudo: /tmp/busser/bin/busser: command not found
+E, [2015-05-05T15:09:53.607610 #28425] ERROR -- default-rhel-66: Verify failed on instance <default-rhel-66>.
+E, [2015-05-05T15:09:53.607794 #28425] ERROR -- default-rhel-66: ------Exception-------
+E, [2015-05-05T15:09:53.607841 #28425] ERROR -- default-rhel-66: Class: Kitchen::ActionFailed
+E, [2015-05-05T15:09:53.607872 #28425] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser suite cleanup
+
+echo "Uploading `sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb (mode=0664)"
+echo "cmVxdWlyZSAnc2VydmVyc3BlYycKc2V0IDpiYWNrZW5kLCA6ZXhlYwoKZGVzY3JpYmUgJ2FwYWNoZTo6ZGVmYXVsdCcgZG8KCWl0ICdTaG91bGQgaGF2ZSB0aGUgc2l0ZSBiZWFycycgZG8KCQlleHBlY3QoZmlsZSgiL3Nydi9hcGFjaGUvYmVhcnMiKSkudG8gYmVfZGlyZWN0b3J5CgllbmQKZW5kCg==" | sudo -E /tmp/busser/bin/busser deserialize --destination=`sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb --md5sum=180582a1830d066a09bfd78fecf8e304 --perms=0664
+
+']
+E, [2015-05-05T15:09:53.607903 #28425] ERROR -- default-rhel-66: ---Nested Exception---
+E, [2015-05-05T15:09:53.607927 #28425] ERROR -- default-rhel-66: Class: Kitchen::SSHFailed
+E, [2015-05-05T15:09:53.607947 #28425] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser suite cleanup
+
+echo "Uploading `sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb (mode=0664)"
+echo "cmVxdWlyZSAnc2VydmVyc3BlYycKc2V0IDpiYWNrZW5kLCA6ZXhlYwoKZGVzY3JpYmUgJ2FwYWNoZTo6ZGVmYXVsdCcgZG8KCWl0ICdTaG91bGQgaGF2ZSB0aGUgc2l0ZSBiZWFycycgZG8KCQlleHBlY3QoZmlsZSgiL3Nydi9hcGFjaGUvYmVhcnMiKSkudG8gYmVfZGlyZWN0b3J5CgllbmQKZW5kCg==" | sudo -E /tmp/busser/bin/busser deserialize --destination=`sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb --md5sum=180582a1830d066a09bfd78fecf8e304 --perms=0664
+
+']
+E, [2015-05-05T15:09:53.608007 #28425] ERROR -- default-rhel-66: ------Backtrace-------
+E, [2015-05-05T15:09:53.608037 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:152:in `rescue in run_remote'
+E, [2015-05-05T15:09:53.608064 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:148:in `run_remote'
+E, [2015-05-05T15:09:53.608094 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:66:in `block in verify'
+E, [2015-05-05T15:09:53.608116 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-05-05T15:09:53.608130 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `new'
+E, [2015-05-05T15:09:53.608149 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `verify'
+E, [2015-05-05T15:09:53.608163 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-05-05T15:09:53.608176 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-05-05T15:09:53.608189 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-05-05T15:09:53.608202 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-05-05T15:09:53.608214 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-05-05T15:09:53.608227 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-05-05T15:09:53.608240 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-05-05T15:09:53.608260 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-05-05T15:09:53.608278 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:330:in `verify_action'
+E, [2015-05-05T15:09:53.608291 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-05-05T15:09:53.608363 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-05-05T15:09:53.608376 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-05-05T15:09:53.608389 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:152:in `verify'
+E, [2015-05-05T15:09:53.608401 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-05-05T15:09:53.608414 #28425] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-05-05T15:09:53.608427 #28425] ERROR -- default-rhel-66: ----------------------
+I, [2015-05-05T15:10:35.206981 #28457]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:10:35.207556 #28457]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:10:35.207642 #28457]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:10:35.207863 #28457]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:10:35.210097 #28457]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:10:35.210943 #28457]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:10:35.300612 #28457]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:10:35.317329 #28457]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:10:36.714642 #28457]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:10:37.559723 #28457]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:10:37.568093 #28457]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:10:37.568514 #28457]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:10:40.093179 #28457]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:10:40.141562 #28457]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:10:40.189668 #28457]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:10:40.190209 #28457]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:10:40.196141 #28457]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create (up to date)
+I, [2015-05-05T15:10:40.197326 #28457]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:10:40.199496 #28457]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:10:40.201338 #28457]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:10:40.205863 #28457]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:10:40.206209 #28457]  INFO -- default-rhel-66:  (up to date)
+I, [2015-05-05T15:10:40.206516 #28457]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:10:40.206735 #28457]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:10:40.206948 #28457]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:10:40.207174 #28457]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 3.504679285 seconds
+I, [2015-05-05T15:10:40.325230 #28457]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m5.12s).
+I, [2015-05-05T15:10:46.899500 #28695]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:10:58.168347 #28695]  INFO -- default-rhel-66: Fetching: thor-0.19.0.gemFetching: thor-0.19.0.gem ( 18%)Fetching: thor-0.19.0.gem ( 35%)Fetching: thor-0.19.0.gem ( 53%)Fetching: thor-0.19.0.gem ( 71%)Fetching: thor-0.19.0.gem ( 89%)Fetching: thor-0.19.0.gem (100%)Fetching: thor-0.19.0.gem (100%)
+I, [2015-05-05T15:10:58.225702 #28695]  INFO -- default-rhel-66: Successfully installed thor-0.19.0
+I, [2015-05-05T15:10:58.376724 #28695]  INFO -- default-rhel-66: Fetching: busser-0.7.1.gemFetching: busser-0.7.1.gem ( 64%)Fetching: busser-0.7.1.gem (100%)Fetching: busser-0.7.1.gem (100%)
+I, [2015-05-05T15:10:58.417268 #28695]  INFO -- default-rhel-66: Successfully installed busser-0.7.1
+I, [2015-05-05T15:10:58.417340 #28695]  INFO -- default-rhel-66: 2 gems installed
+I, [2015-05-05T15:10:58.654856 #28695]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:10:58.655106 #28695]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:10:58.655296 #28695]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:11:10.520968 #28695]  INFO -- default-rhel-66: Plugin serverspec installed (version 0.5.6)
+I, [2015-05-05T15:11:10.525297 #28695]  INFO -- default-rhel-66: -----> Running postinstall for serverspec plugin
+I, [2015-05-05T15:11:17.990396 #28695]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m31.09s).
+I, [2015-05-05T15:11:17.990528 #28695]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:11:18.301870 #28695]  INFO -- default-rhel-66: Suite path directory /tmp/busser/suites does not exist, skipping.
+I, [2015-05-05T15:11:18.548855 #28695]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:11:19.268693 #28695]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:11:19.273587 #28695]  INFO -- default-rhel-66: -----> Installing Serverspec..
+I, [2015-05-05T15:11:26.171936 #28695]  INFO -- default-rhel-66: Fetching: net-ssh-2.9.2.gemFetching: net-ssh-2.9.2.gem (  9%)Fetching: net-ssh-2.9.2.gem ( 19%)Fetching: net-ssh-2.9.2.gem ( 28%)Fetching: net-ssh-2.9.2.gem ( 37%)Fetching: net-ssh-2.9.2.gem ( 46%)Fetching: net-ssh-2.9.2.gem ( 55%)Fetching: net-ssh-2.9.2.gem ( 65%)Fetching: net-ssh-2.9.2.gem ( 74%)Fetching: net-ssh-2.9.2.gem ( 83%)Fetching: net-ssh-2.9.2.gem ( 92%)Fetching: net-ssh-2.9.2.gem (100%)Fetching: net-ssh-2.9.2.gem (100%)
+I, [2015-05-05T15:11:26.478980 #28695]  INFO -- default-rhel-66: Fetching: net-scp-1.2.1.gemFetching: net-scp-1.2.1.gem ( 48%)Fetching: net-scp-1.2.1.gem ( 98%)Fetching: net-scp-1.2.1.gem (100%)Fetching: net-scp-1.2.1.gem (100%)
+I, [2015-05-05T15:11:26.766237 #28695]  INFO -- default-rhel-66: Fetching: specinfra-2.30.4.gemFetching: specinfra-2.30.4.gem ( 31%)Fetching: specinfra-2.30.4.gem ( 62%)Fetching: specinfra-2.30.4.gem ( 94%)Fetching: specinfra-2.30.4.gem (100%)Fetching: specinfra-2.30.4.gem (100%)
+I, [2015-05-05T15:11:27.099658 #28695]  INFO -- default-rhel-66: Fetching: multi_json-1.11.0.gemFetching: multi_json-1.11.0.gem ( 63%)Fetching: multi_json-1.11.0.gem (100%)Fetching: multi_json-1.11.0.gem (100%)
+I, [2015-05-05T15:11:27.366128 #28695]  INFO -- default-rhel-66: Fetching: diff-lcs-1.2.5.gemFetching: diff-lcs-1.2.5.gem ( 32%)Fetching: diff-lcs-1.2.5.gem ( 66%)Fetching: diff-lcs-1.2.5.gem ( 99%)Fetching: diff-lcs-1.2.5.gem (100%)Fetching: diff-lcs-1.2.5.gem (100%)
+I, [2015-05-05T15:11:27.637128 #28695]  INFO -- default-rhel-66: Fetching: rspec-support-3.2.2.gemFetching: rspec-support-3.2.2.gem ( 62%)Fetching: rspec-support-3.2.2.gem (100%)Fetching: rspec-support-3.2.2.gem (100%)
+I, [2015-05-05T15:11:27.926708 #28695]  INFO -- default-rhel-66: Fetching: rspec-expectations-3.2.1.gemFetching: rspec-expectations-3.2.1.gem ( 23%)Fetching: rspec-expectations-3.2.1.gem ( 48%)Fetching: rspec-expectations-3.2.1.gem ( 72%)Fetching: rspec-expectations-3.2.1.gem ( 96%)Fetching: rspec-expectations-3.2.1.gem (100%)Fetching: rspec-expectations-3.2.1.gem (100%)
+I, [2015-05-05T15:11:28.261942 #28695]  INFO -- default-rhel-66: Fetching: rspec-core-3.2.3.gemFetching: rspec-core-3.2.3.gem ( 13%)Fetching: rspec-core-3.2.3.gem ( 27%)Fetching: rspec-core-3.2.3.gem ( 40%)Fetching: rspec-core-3.2.3.gem ( 54%)Fetching: rspec-core-3.2.3.gem ( 67%)Fetching: rspec-core-3.2.3.gem ( 81%)Fetching: rspec-core-3.2.3.gem ( 94%)Fetching: rspec-core-3.2.3.gem (100%)Fetching: rspec-core-3.2.3.gem (100%)
+I, [2015-05-05T15:11:28.549666 #28695]  INFO -- default-rhel-66: Fetching: rspec-its-1.2.0.gemFetching: rspec-its-1.2.0.gem (100%)Fetching: rspec-its-1.2.0.gem (100%)
+I, [2015-05-05T15:11:28.838101 #28695]  INFO -- default-rhel-66: Fetching: rspec-mocks-3.2.1.gemFetching: rspec-mocks-3.2.1.gem ( 23%)Fetching: rspec-mocks-3.2.1.gem ( 46%)Fetching: rspec-mocks-3.2.1.gem ( 69%)Fetching: rspec-mocks-3.2.1.gem ( 92%)Fetching: rspec-mocks-3.2.1.gem (100%)Fetching: rspec-mocks-3.2.1.gem (100%)
+I, [2015-05-05T15:11:29.098489 #28695]  INFO -- default-rhel-66: Fetching: rspec-3.2.0.gemFetching: rspec-3.2.0.gem (100%)Fetching: rspec-3.2.0.gem (100%)
+I, [2015-05-05T15:11:29.232962 #28695]  INFO -- default-rhel-66: Fetching: serverspec-2.14.1.gemFetching: serverspec-2.14.1.gem ( 47%)Fetching: serverspec-2.14.1.gem ( 97%)Fetching: serverspec-2.14.1.gem (100%)Fetching: serverspec-2.14.1.gem (100%)
+I, [2015-05-05T15:11:29.306899 #28695]  INFO -- default-rhel-66: -----> serverspec installed (version 2.14.1)
+I, [2015-05-05T15:11:29.394974 #28695]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:11:29.770789 #28695]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:11:29.770858 #28695]  INFO -- default-rhel-66: apache::default
+I, [2015-05-05T15:11:29.815883 #28695]  INFO -- default-rhel-66: [32m  Should have the site bears[0m
+I, [2015-05-05T15:11:29.816141 #28695]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:11:29.816180 #28695]  INFO -- default-rhel-66: Finished in 0.04532 seconds (files took 0.333 seconds to load)
+I, [2015-05-05T15:11:29.816202 #28695]  INFO -- default-rhel-66: [32m1 example, 0 failures[0m
+I, [2015-05-05T15:11:29.816407 #28695]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:11:29.855915 #28695]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m11.86s).
+I, [2015-05-05T15:15:45.536128 #28926]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:15:45.536681 #28926]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:15:45.536768 #28926]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:15:45.537034 #28926]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:15:45.539266 #28926]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:15:45.540098 #28926]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:15:45.628907 #28926]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:15:45.645834 #28926]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:15:47.044865 #28926]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:15:52.906720 #28926]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:15:52.915014 #28926]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:15:52.915388 #28926]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:15:55.453318 #28926]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:15:55.501746 #28926]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:15:55.549398 #28926]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:15:55.549777 #28926]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:15:55.555551 #28926]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create (up to date)
+I, [2015-05-05T15:15:55.556638 #28926]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:15:55.558581 #28926]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:15:55.563019 #28926]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:15:55.563454 #28926]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:15:55.563663 #28926]  INFO -- default-rhel-66:  (up to date)
+I, [2015-05-05T15:15:55.563896 #28926]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:15:55.564059 #28926]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:15:55.564195 #28926]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:15:55.564337 #28926]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 8.537776265 seconds
+I, [2015-05-05T15:15:55.683147 #28926]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m10.15s).
+I, [2015-05-05T15:16:02.880407 #29178]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:16:03.423072 #29178]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:16:03.423345 #29178]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:16:03.423777 #29178]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:16:34.286866 #29178]  INFO -- default-rhel-66: Plugin serverspec already installed
+I, [2015-05-05T15:16:34.306123 #29178]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m31.42s).
+I, [2015-05-05T15:16:34.306260 #29178]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:16:34.692790 #29178]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:16:34.998630 #29178]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:16:35.985655 #29178]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:16:36.100942 #29178]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:16:36.257253 #29178]  INFO -- default-rhel-66: /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/configuration.rb:1226:in `load': /tmp/busser/suites/serverspec/default_spec.rb:24: syntax error, unexpected end-of-input, expecting keyword_end (SyntaxError)
+I, [2015-05-05T15:16:36.258144 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/configuration.rb:1226:in `block in load_spec_files'
+I, [2015-05-05T15:16:36.264618 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/configuration.rb:1224:in `each'
+I, [2015-05-05T15:16:36.268392 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/configuration.rb:1224:in `load_spec_files'
+I, [2015-05-05T15:16:36.269657 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/runner.rb:97:in `setup'
+I, [2015-05-05T15:16:36.270187 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/runner.rb:85:in `run'
+I, [2015-05-05T15:16:36.270632 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/runner.rb:70:in `run'
+I, [2015-05-05T15:16:36.271078 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/lib/rspec/core/runner.rb:38:in `invoke'
+I, [2015-05-05T15:16:36.271611 #29178]  INFO -- default-rhel-66: 	from /tmp/busser/gems/gems/rspec-core-3.2.3/exe/rspec:4:in `<top (required)>'
+I, [2015-05-05T15:16:36.272067 #29178]  INFO -- default-rhel-66: 	from /opt/chef/embedded/bin/rspec:23:in `load'
+I, [2015-05-05T15:16:36.272537 #29178]  INFO -- default-rhel-66: 	from /opt/chef/embedded/bin/rspec:23:in `<main>'
+I, [2015-05-05T15:16:36.273730 #29178]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec failed
+I, [2015-05-05T15:16:36.275791 #29178]  INFO -- default-rhel-66: !!!!!! Ruby Script [/tmp/busser/gems/gems/busser-serverspec-0.5.6/lib/busser/runner_plugin/../serverspec/runner.rb /tmp/busser/suites/serverspec] exit code was 1
+E, [2015-05-05T15:16:36.286998 #29178] ERROR -- default-rhel-66: Verify failed on instance <default-rhel-66>.
+E, [2015-05-05T15:16:36.287122 #29178] ERROR -- default-rhel-66: ------Exception-------
+E, [2015-05-05T15:16:36.287149 #29178] ERROR -- default-rhel-66: Class: Kitchen::ActionFailed
+E, [2015-05-05T15:16:36.287165 #29178] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser test
+']
+E, [2015-05-05T15:16:36.287179 #29178] ERROR -- default-rhel-66: ---Nested Exception---
+E, [2015-05-05T15:16:36.287193 #29178] ERROR -- default-rhel-66: Class: Kitchen::SSHFailed
+E, [2015-05-05T15:16:36.287207 #29178] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser test
+']
+E, [2015-05-05T15:16:36.287221 #29178] ERROR -- default-rhel-66: ------Backtrace-------
+E, [2015-05-05T15:16:36.287234 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:152:in `rescue in run_remote'
+E, [2015-05-05T15:16:36.287248 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:148:in `run_remote'
+E, [2015-05-05T15:16:36.287265 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:67:in `block in verify'
+E, [2015-05-05T15:16:36.287279 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-05-05T15:16:36.287293 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `new'
+E, [2015-05-05T15:16:36.287307 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `verify'
+E, [2015-05-05T15:16:36.287345 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-05-05T15:16:36.287359 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-05-05T15:16:36.287373 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-05-05T15:16:36.287386 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-05-05T15:16:36.287402 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-05-05T15:16:36.287428 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-05-05T15:16:36.287443 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-05-05T15:16:36.287457 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-05-05T15:16:36.287470 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:330:in `verify_action'
+E, [2015-05-05T15:16:36.287483 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-05-05T15:16:36.287497 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-05-05T15:16:36.287510 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-05-05T15:16:36.287524 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:152:in `verify'
+E, [2015-05-05T15:16:36.287540 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-05-05T15:16:36.287554 #29178] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-05-05T15:16:36.287568 #29178] ERROR -- default-rhel-66: ----------------------
+I, [2015-05-05T15:18:38.947507 #29353]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:18:38.948062 #29353]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:18:38.948148 #29353]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:18:38.948368 #29353]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:18:38.950644 #29353]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:18:38.951507 #29353]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:18:39.040624 #29353]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:18:39.057215 #29353]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:18:40.457320 #29353]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:18:41.277219 #29353]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:18:41.285495 #29353]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:18:41.285881 #29353]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:18:43.792990 #29353]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:18:43.840981 #29353]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:18:43.888124 #29353]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:18:43.888910 #29353]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:18:43.895143 #29353]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create (up to date)
+I, [2015-05-05T15:18:43.896538 #29353]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:18:43.898806 #29353]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:18:43.900997 #29353]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:18:43.902331 #29353]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:18:43.904336 #29353]  INFO -- default-rhel-66:   * template[/srv/apache/bears/index.html] action create (up to date)
+I, [2015-05-05T15:18:43.904606 #29353]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:43.904879 #29353]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:18:43.905063 #29353]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:18:43.905354 #29353]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 3.461793539 seconds
+I, [2015-05-05T15:18:44.023843 #29353]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m5.07s).
+I, [2015-05-05T15:18:47.897898 #29591]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:18:48.436029 #29591]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:18:48.436309 #29591]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:18:48.436632 #29591]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:18:52.853189 #29591]  INFO -- default-rhel-66: Plugin serverspec already installed
+I, [2015-05-05T15:18:52.871953 #29591]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m4.97s).
+I, [2015-05-05T15:18:52.872102 #29591]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:18:53.185910 #29591]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:18:53.431946 #29591]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:18:54.156029 #29591]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:18:54.248962 #29591]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:18:54.620409 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.620724 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.701469 #29591]  INFO -- default-rhel-66: [32m  Apache should be installed[0m
+I, [2015-05-05T15:18:54.723017 #29591]  INFO -- default-rhel-66: [32m  should be running[0m
+I, [2015-05-05T15:18:54.734283 #29591]  INFO -- default-rhel-66: [31m  should be listening on port 80 and 81 (FAILED - 1)[0m
+I, [2015-05-05T15:18:54.739417 #29591]  INFO -- default-rhel-66: [32m  Has the bears index directory[0m
+I, [2015-05-05T15:18:54.740348 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.740407 #29591]  INFO -- default-rhel-66: Failures:
+I, [2015-05-05T15:18:54.740448 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.740487 #29591]  INFO -- default-rhel-66:   1) apache::default should be listening on port 80 and 81
+I, [2015-05-05T15:18:54.740519 #29591]  INFO -- default-rhel-66:      [31mFailure/Error: expect(port 81).to be_listneing[0m
+I, [2015-05-05T15:18:54.740547 #29591]  INFO -- default-rhel-66:      [31m  expected Port "81" to respond to `listneing?`[0m
+I, [2015-05-05T15:18:54.740574 #29591]  INFO -- default-rhel-66:      [31m  /bin/sh -c netstat\ -tunl\ \|\ grep\ --\ :80\\\ [0m
+I, [2015-05-05T15:18:54.740945 #29591]  INFO -- default-rhel-66:      [31m  tcp        0      0 :::80                       :::*                        LISTEN      
+I, [2015-05-05T15:18:54.740994 #29591]  INFO -- default-rhel-66: [0m
+I, [2015-05-05T15:18:54.741025 #29591]  INFO -- default-rhel-66:      [36m# /tmp/busser/suites/serverspec/default_spec.rb:15:in `block (2 levels) in <top (required)>'[0m
+I, [2015-05-05T15:18:54.741235 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.741278 #29591]  INFO -- default-rhel-66: Finished in 0.11935 seconds (files took 0.32947 seconds to load)
+I, [2015-05-05T15:18:54.741309 #29591]  INFO -- default-rhel-66: [31m4 examples, 1 failure[0m
+I, [2015-05-05T15:18:54.741336 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.741362 #29591]  INFO -- default-rhel-66: Failed examples:
+I, [2015-05-05T15:18:54.741645 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.741688 #29591]  INFO -- default-rhel-66: [31mrspec /tmp/busser/suites/serverspec/default_spec.rb:13[0m [36m# apache::default should be listening on port 80 and 81[0m
+I, [2015-05-05T15:18:54.741874 #29591]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:18:54.754755 #29591]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec failed
+I, [2015-05-05T15:18:54.760176 #29591]  INFO -- default-rhel-66: !!!!!! Ruby Script [/tmp/busser/gems/gems/busser-serverspec-0.5.6/lib/busser/runner_plugin/../serverspec/runner.rb /tmp/busser/suites/serverspec] exit code was 1
+E, [2015-05-05T15:18:54.772581 #29591] ERROR -- default-rhel-66: Verify failed on instance <default-rhel-66>.
+E, [2015-05-05T15:18:54.772726 #29591] ERROR -- default-rhel-66: ------Exception-------
+E, [2015-05-05T15:18:54.772754 #29591] ERROR -- default-rhel-66: Class: Kitchen::ActionFailed
+E, [2015-05-05T15:18:54.772770 #29591] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser test
+']
+E, [2015-05-05T15:18:54.772784 #29591] ERROR -- default-rhel-66: ---Nested Exception---
+E, [2015-05-05T15:18:54.772798 #29591] ERROR -- default-rhel-66: Class: Kitchen::SSHFailed
+E, [2015-05-05T15:18:54.772811 #29591] ERROR -- default-rhel-66: Message: SSH exited (1) for command: [sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser test
+']
+E, [2015-05-05T15:18:54.772824 #29591] ERROR -- default-rhel-66: ------Backtrace-------
+E, [2015-05-05T15:18:54.772854 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:152:in `rescue in run_remote'
+E, [2015-05-05T15:18:54.772886 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:148:in `run_remote'
+E, [2015-05-05T15:18:54.772902 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:67:in `block in verify'
+E, [2015-05-05T15:18:54.772916 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/ssh.rb:70:in `initialize'
+E, [2015-05-05T15:18:54.772929 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `new'
+E, [2015-05-05T15:18:54.772942 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/driver/ssh_base.rb:65:in `verify'
+E, [2015-05-05T15:18:54.772955 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `public_send'
+E, [2015-05-05T15:18:54.772994 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `block in perform_action'
+E, [2015-05-05T15:18:54.773007 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `call'
+E, [2015-05-05T15:18:54.773024 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:416:in `synchronize_or_call'
+E, [2015-05-05T15:18:54.773038 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:381:in `block in action'
+E, [2015-05-05T15:18:54.773051 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-05-05T15:18:54.773064 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:380:in `action'
+E, [2015-05-05T15:18:54.773087 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:352:in `perform_action'
+E, [2015-05-05T15:18:54.773103 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:330:in `verify_action'
+E, [2015-05-05T15:18:54.773116 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:292:in `block in transition_to'
+E, [2015-05-05T15:18:54.773129 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `each'
+E, [2015-05-05T15:18:54.773142 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:291:in `transition_to'
+E, [2015-05-05T15:18:54.773159 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:152:in `verify'
+E, [2015-05-05T15:18:54.773173 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-05-05T15:18:54.773186 #29591] ERROR -- default-rhel-66: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-05-05T15:18:54.773199 #29591] ERROR -- default-rhel-66: ----------------------
+I, [2015-05-05T15:19:35.470801 #29686]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:19:35.471391 #29686]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:19:35.471489 #29686]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:19:35.471767 #29686]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:19:35.474088 #29686]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:19:35.474963 #29686]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:19:35.564198 #29686]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:19:35.580331 #29686]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:19:36.991646 #29686]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:19:37.853804 #29686]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:19:37.862099 #29686]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:19:37.862474 #29686]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:19:40.367972 #29686]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:19:40.415726 #29686]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:19:40.462464 #29686]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:19:40.462859 #29686]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:19:40.468643 #29686]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create (up to date)
+I, [2015-05-05T15:19:40.469751 #29686]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:19:40.471736 #29686]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:19:40.475737 #29686]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:19:40.476063 #29686]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:19:40.476979 #29686]  INFO -- default-rhel-66:   * template[/srv/apache/bears/index.html] action create (up to date)
+I, [2015-05-05T15:19:40.477209 #29686]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:19:40.477438 #29686]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:19:40.477472 #29686]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:19:40.477615 #29686]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 3.517685985 seconds
+I, [2015-05-05T15:19:40.595585 #29686]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m5.12s).
+I, [2015-05-05T15:20:05.518536 #29925]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:20:06.065995 #29925]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:20:06.066270 #29925]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:20:06.066424 #29925]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:20:07.675409 #29925]  INFO -- default-rhel-66: Plugin serverspec already installed
+I, [2015-05-05T15:20:07.693898 #29925]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m2.17s).
+I, [2015-05-05T15:20:07.694037 #29925]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:20:08.005903 #29925]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:20:08.250761 #29925]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:20:08.976382 #29925]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:20:09.069182 #29925]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:20:09.443780 #29925]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:20:09.444050 #29925]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:20:09.525748 #29925]  INFO -- default-rhel-66: [32m  Apache should be installed[0m
+I, [2015-05-05T15:20:09.547572 #29925]  INFO -- default-rhel-66: [32m  should be running[0m
+I, [2015-05-05T15:20:09.554610 #29925]  INFO -- default-rhel-66: [32m  should be listening on port 80 and 81[0m
+I, [2015-05-05T15:20:09.563671 #29925]  INFO -- default-rhel-66: [32m  Has the bears index directory[0m
+I, [2015-05-05T15:20:09.563935 #29925]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:20:09.564018 #29925]  INFO -- default-rhel-66: Finished in 0.12017 seconds (files took 0.33186 seconds to load)
+I, [2015-05-05T15:20:09.564059 #29925]  INFO -- default-rhel-66: [32m4 examples, 0 failures[0m
+I, [2015-05-05T15:20:09.564253 #29925]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:20:09.596356 #29925]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m1.90s).
+I, [2015-05-05T15:21:04.081147 #30020]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:21:04.081673 #30020]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:21:04.081756 #30020]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:21:04.081974 #30020]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:21:04.084119 #30020]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:21:04.084999 #30020]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:21:04.172118 #30020]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:21:04.188317 #30020]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:21:05.581808 #30020]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:21:06.402779 #30020]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:21:06.411185 #30020]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:21:06.411646 #30020]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:21:08.923665 #30020]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:21:08.971334 #30020]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:21:09.018429 #30020]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:21:09.018957 #30020]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:21:09.024891 #30020]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/clowns.conf] action create (up to date)
+I, [2015-05-05T15:21:09.026116 #30020]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:21:09.028228 #30020]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:21:09.030194 #30020]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:21:09.031443 #30020]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:21:09.033318 #30020]  INFO -- default-rhel-66:   * template[/srv/apache/bears/index.html] action create (up to date)
+I, [2015-05-05T15:21:09.033631 #30020]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:21:09.033815 #30020]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:21:09.033988 #30020]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:21:09.034277 #30020]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 3.465851721 seconds
+I, [2015-05-05T15:21:09.151697 #30020]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m5.07s).
+I, [2015-05-05T15:21:17.256246 #30258]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:21:17.796307 #30258]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:21:17.796573 #30258]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:21:17.797108 #30258]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:21:19.430518 #30258]  INFO -- default-rhel-66: Plugin serverspec already installed
+I, [2015-05-05T15:21:19.449161 #30258]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m2.19s).
+I, [2015-05-05T15:21:19.449301 #30258]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:21:19.762719 #30258]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:21:20.012295 #30258]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:21:20.735575 #30258]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:21:20.828134 #30258]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:21:21.203922 #30258]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:21:21.203993 #30258]  INFO -- default-rhel-66: apache::default
+I, [2015-05-05T15:21:21.285427 #30258]  INFO -- default-rhel-66: [32m  Apache should be installed[0m
+I, [2015-05-05T15:21:21.307086 #30258]  INFO -- default-rhel-66: [32m  should be running[0m
+I, [2015-05-05T15:21:21.323128 #30258]  INFO -- default-rhel-66: [32m  should be listening on port 80 and 81[0m
+I, [2015-05-05T15:21:21.329932 #30258]  INFO -- default-rhel-66: [32m  Has the bears index directory[0m
+I, [2015-05-05T15:21:21.330158 #30258]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:21:21.330196 #30258]  INFO -- default-rhel-66: Finished in 0.12636 seconds (files took 0.33285 seconds to load)
+I, [2015-05-05T15:21:21.330218 #30258]  INFO -- default-rhel-66: [32m4 examples, 0 failures[0m
+I, [2015-05-05T15:21:21.330381 #30258]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:21:21.362305 #30258]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m1.91s).
+I, [2015-05-05T15:22:18.409254 #30397]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+D, [2015-05-05T15:22:18.410705 #30397] DEBUG -- default-rhel-66: [SSH] kitchen@localhost:49153<{:user_known_hosts_file=>"/dev/null", :paranoid=>false, :password=>"kitchen", :port=>49153}> (sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser suite cleanup
+
+echo "Uploading `sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb (mode=0664)"
+echo "cmVxdWlyZSAnc2VydmVyc3BlYycKc2V0IDpiYWNrZW5kLCA6ZXhlYwoKZGVzY3JpYmUgJ2FwYWNoZTo6ZGVmYXVsdCcgZG8KCWl0ICdBcGFjaGUgc2hvdWxkIGJlIGluc3RhbGxlZCcgZG8KCQlleHBlY3QocGFja2FnZSgiaHR0cGQiKSkudG8gYmVfaW5zdGFsbGVkCgllbmQKCglpdCAnc2hvdWxkIGJlIHJ1bm5pbmcnIGRvCgkJZXhwZWN0KHNlcnZpY2UoImh0dHBkIikpLnRvIGJlX3J1bm5pbmcKCWVuZAoKCWl0ICdzaG91bGQgYmUgbGlzdGVuaW5nIG9uIHBvcnQgODAgYW5kIDgxJ2RvCgkJZXhwZWN0KHBvcnQgODApLnRvIGJlX2xpc3RlbmluZwoJCWV4cGVjdChwb3J0IDgxKS50byBiZV9saXN0ZW5pbmcKCWVuZAoKCWl0ICdIYXMgdGhlIGJlYXJzIGluZGV4IGRpcmVjdG9yeScgZG8KCQlleHBlY3QoZmlsZSgiL3Nydi9hcGFjaGUvYmVhcnMiKSkudG8gYmVfZGlyZWN0b3J5CgllbmQKCmVuZAo=" | sudo -E /tmp/busser/bin/busser deserialize --destination=`sudo -E /tmp/busser/bin/busser suite path`/serverspec/default_spec.rb --md5sum=8f8f59d58b245bbe35c54ecfb3b1b885 --perms=0664
+
+')
+D, [2015-05-05T15:22:18.410847 #30397] DEBUG -- default-rhel-66: [SSH] opening connection to kitchen@localhost:49153<{:user_known_hosts_file=>"/dev/null", :paranoid=>false, :password=>"kitchen", :port=>49153}>
+I, [2015-05-05T15:22:18.726633 #30397]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:22:18.976044 #30397]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+D, [2015-05-05T15:22:19.450424 #30397] DEBUG -- default-rhel-66: [SSH] kitchen@localhost:49153<{:user_known_hosts_file=>"/dev/null", :paranoid=>false, :password=>"kitchen", :port=>49153, :user=>"kitchen"}> (sh -c '
+BUSSER_ROOT="/tmp/busser" GEM_HOME="/tmp/busser/gems" GEM_PATH="/tmp/busser/gems" GEM_CACHE="/tmp/busser/gems/cache" 
+export BUSSER_ROOT GEM_HOME GEM_PATH GEM_CACHE
+
+sudo -E /tmp/busser/bin/busser test
+')
+I, [2015-05-05T15:22:19.701095 #30397]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:22:19.793601 #30397]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:22:20.166408 #30397]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:22:20.166500 #30397]  INFO -- default-rhel-66: apache::default
+I, [2015-05-05T15:22:20.248938 #30397]  INFO -- default-rhel-66: [32m  Apache should be installed[0m
+I, [2015-05-05T15:22:20.270963 #30397]  INFO -- default-rhel-66: [32m  should be running[0m
+I, [2015-05-05T15:22:20.287355 #30397]  INFO -- default-rhel-66: [32m  should be listening on port 80 and 81[0m
+I, [2015-05-05T15:22:20.294316 #30397]  INFO -- default-rhel-66: [32m  Has the bears index directory[0m
+I, [2015-05-05T15:22:20.294541 #30397]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:22:20.294578 #30397]  INFO -- default-rhel-66: Finished in 0.12824 seconds (files took 0.3306 seconds to load)
+I, [2015-05-05T15:22:20.294604 #30397]  INFO -- default-rhel-66: [32m4 examples, 0 failures[0m
+I, [2015-05-05T15:22:20.294827 #30397]  INFO -- default-rhel-66: 
+D, [2015-05-05T15:22:20.326158 #30397] DEBUG -- default-rhel-66: [SSH] closing connection to kitchen@localhost:49153<{:user_known_hosts_file=>"/dev/null", :paranoid=>false, :password=>"kitchen", :port=>49153, :user=>"kitchen"}>
+I, [2015-05-05T15:22:20.328008 #30397]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m1.92s).
+I, [2015-05-05T15:22:36.766258 #30481]  INFO -- default-rhel-66: -----> Converging <default-rhel-66>...
+I, [2015-05-05T15:22:36.766816 #30481]  INFO -- default-rhel-66: Preparing files for transfer
+I, [2015-05-05T15:22:36.766916 #30481]  INFO -- default-rhel-66: Preparing dna.json
+I, [2015-05-05T15:22:36.767168 #30481]  INFO -- default-rhel-66: Preparing current project directory as a cookbook
+I, [2015-05-05T15:22:36.769492 #30481]  INFO -- default-rhel-66: Removing non-cookbook files before transfer
+I, [2015-05-05T15:22:36.770368 #30481]  INFO -- default-rhel-66: Preparing solo.rb
+I, [2015-05-05T15:22:36.860539 #30481]  INFO -- default-rhel-66: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-05-05T15:22:36.876564 #30481]  INFO -- default-rhel-66: Transferring files to <default-rhel-66>
+I, [2015-05-05T15:22:38.286661 #30481]  INFO -- default-rhel-66: Starting Chef Client, version 12.3.0
+I, [2015-05-05T15:22:39.135747 #30481]  INFO -- default-rhel-66: Compiling Cookbooks...
+I, [2015-05-05T15:22:39.144011 #30481]  INFO -- default-rhel-66: Converging 9 resources
+I, [2015-05-05T15:22:39.144317 #30481]  INFO -- default-rhel-66: Recipe: apache::default
+I, [2015-05-05T15:22:41.650586 #30481]  INFO -- default-rhel-66:   * yum_package[httpd] action install (up to date)
+I, [2015-05-05T15:22:41.687989 #30481]  INFO -- default-rhel-66:   * service[httpd] action enable (up to date)
+I, [2015-05-05T15:22:41.735095 #30481]  INFO -- default-rhel-66:   * service[httpd] action start (up to date)
+I, [2015-05-05T15:22:41.735602 #30481]  INFO -- default-rhel-66:   * execute[mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled] action run (skipped due to only_if)
+I, [2015-05-05T15:22:41.741761 #30481]  INFO -- default-rhel-66:  (up to date)
+I, [2015-05-05T15:22:41.742821 #30481]  INFO -- default-rhel-66:   * directory[/srv/apache/clowns] action create (up to date)
+I, [2015-05-05T15:22:41.745434 #30481]  INFO -- default-rhel-66:   * template[/srv/apache/clowns/index.html] action create (up to date)
+I, [2015-05-05T15:22:41.746985 #30481]  INFO -- default-rhel-66:   * template[/etc/httpd/conf.d/bears.conf] action create (up to date)
+I, [2015-05-05T15:22:41.747924 #30481]  INFO -- default-rhel-66:   * directory[/srv/apache/bears] action create (up to date)
+I, [2015-05-05T15:22:41.749632 #30481]  INFO -- default-rhel-66:   * template[/srv/apache/bears/index.html] action create (up to date)
+I, [2015-05-05T15:22:41.749844 #30481]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:22:41.750016 #30481]  INFO -- default-rhel-66: Running handlers:
+I, [2015-05-05T15:22:41.750049 #30481]  INFO -- default-rhel-66: Running handlers complete
+I, [2015-05-05T15:22:41.750169 #30481]  INFO -- default-rhel-66: Chef Client finished, 0/9 resources updated in 3.491005938 seconds
+I, [2015-05-05T15:22:41.868332 #30481]  INFO -- default-rhel-66: Finished converging <default-rhel-66> (0m5.10s).
+I, [2015-05-05T15:22:46.562288 #30719]  INFO -- default-rhel-66: -----> Setting up <default-rhel-66>...
+I, [2015-05-05T15:22:47.111211 #30719]  INFO -- default-rhel-66: -----> Setting up Busser
+I, [2015-05-05T15:22:47.111476 #30719]  INFO -- default-rhel-66: Creating BUSSER_ROOT in /tmp/busser
+I, [2015-05-05T15:22:47.111728 #30719]  INFO -- default-rhel-66: Creating busser binstub
+I, [2015-05-05T15:23:00.268661 #30719]  INFO -- default-rhel-66: Plugin serverspec already installed
+I, [2015-05-05T15:23:00.287219 #30719]  INFO -- default-rhel-66: Finished setting up <default-rhel-66> (0m13.72s).
+I, [2015-05-05T15:23:00.287366 #30719]  INFO -- default-rhel-66: -----> Verifying <default-rhel-66>...
+I, [2015-05-05T15:23:00.601758 #30719]  INFO -- default-rhel-66: Removing /tmp/busser/suites/serverspec
+I, [2015-05-05T15:23:00.850112 #30719]  INFO -- default-rhel-66: Uploading /tmp/busser/suites/serverspec/default_spec.rb (mode=0664)
+I, [2015-05-05T15:23:01.575325 #30719]  INFO -- default-rhel-66: -----> Running serverspec test suite
+I, [2015-05-05T15:23:01.668659 #30719]  INFO -- default-rhel-66: /opt/chef/embedded/bin/ruby -I/tmp/busser/suites/serverspec -I/tmp/busser/gems/gems/rspec-support-3.2.2/lib:/tmp/busser/gems/gems/rspec-core-3.2.3/lib /opt/chef/embedded/bin/rspec --pattern /tmp/busser/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/busser/suites/serverspec
+I, [2015-05-05T15:23:02.046968 #30719]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:23:02.047155 #30719]  INFO -- default-rhel-66: apache::default
+I, [2015-05-05T15:23:02.129842 #30719]  INFO -- default-rhel-66: [32m  Apache should be installed[0m
+I, [2015-05-05T15:23:02.151679 #30719]  INFO -- default-rhel-66: [32m  should be running[0m
+I, [2015-05-05T15:23:02.165547 #30719]  INFO -- default-rhel-66: [32m  should be listening on port 80 and 81[0m
+I, [2015-05-05T15:23:02.172227 #30719]  INFO -- default-rhel-66: [32m  Has the bears index directory[0m
+I, [2015-05-05T15:23:02.172489 #30719]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:23:02.172536 #30719]  INFO -- default-rhel-66: Finished in 0.12548 seconds (files took 0.33524 seconds to load)
+I, [2015-05-05T15:23:02.172563 #30719]  INFO -- default-rhel-66: [32m4 examples, 0 failures[0m
+I, [2015-05-05T15:23:02.172804 #30719]  INFO -- default-rhel-66: 
+I, [2015-05-05T15:23:02.205314 #30719]  INFO -- default-rhel-66: Finished verifying <default-rhel-66> (0m1.92s).

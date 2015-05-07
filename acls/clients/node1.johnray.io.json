@@ -1,0 +1,49 @@
+{
+  "create": {
+    "actors": [
+      "node1.johnray.io",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "read": {
+    "actors": [
+      "node1.johnray.io",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "update": {
+    "actors": [
+      "node1.johnray.io",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  },
+  "delete": {
+    "actors": [
+      "node1.johnray.io",
+      "pivotal"
+    ],
+    "groups": [
+      "admins",
+      "users"
+    ]
+  },
+  "grant": {
+    "actors": [
+      "node1.johnray.io",
+      "pivotal"
+    ],
+    "groups": [
+      "admins"
+    ]
+  }
+}

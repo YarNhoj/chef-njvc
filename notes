@@ -1,0 +1,26 @@
+Clinton system engineer no chef vi
+david sys eng no chef n++
+john corvin  sys eng no chef n++
+mark sys eng network virtulization no chef some salt n++
+Fred sys admin no chef vi
+Lewis tech lead netowrkign no chef notepad
+Rob soft eng architecture web projects no chef n++
+tony sys eng hardware guy no chef vi
+hoffman sys eng no chef vi
+johnathon sys admin no chef vi
+kevin e cloud team c2s aws little chef
+justin sol arch cloud no chef vi
+mike smidth c2s beginer chef chef on the high side vi
+jeremy server guy no chef vi
+
+They are running chef in their c2s which is class aws platform.:w!
+
+100 Orgs will need a visualization layer for other org's
+Will need a super market for blessed cookbooks. Will need for those cookbooks to not be able to be overwritten.
+Auditing
+
+On site you need a mifi so that you can download things. In Addition I need some USB keys. Need a mini wifi hub so that people can nfs/samba mount from my system.
+
+How beefy does the chef server need to be?
+
+They are going to beed a common workflow for development of cookbooks because other orgs will be creating them. They are going to need some sort of submission process.
